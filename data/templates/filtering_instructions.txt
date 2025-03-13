@@ -1,0 +1,12 @@
+
+## Evaluator TODOs
+
+1. Read the LLM's Input and Output
+2. Evaluate shall type classification, and replace [X] with:
+    [0], if it is wrong
+    [1], if correct
+3. Evaluate your satisfaction with the justification, and replace [X] with:
+    [0], if not satisfactory
+    [1], if satisfactory.
+
+4. Save this file and go to next file.

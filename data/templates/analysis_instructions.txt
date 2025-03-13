@@ -1,0 +1,22 @@
+
+## Evaluator TODOs
+
+1. Read the LLM's Input and Output.
+2. Evaluate whether the number of extracted obligation is correct.
+    [0], if it is wrong
+    [1], if correct
+2. Evaluate Obligation Type Framework, and replace [X] with:
+    [0], if it is wrong
+    [1], if correct
+3. Evaluate the extracted information according to the following:
+    - Extracted value (information itself is correct or not?)
+        [0], if it is wrong
+        [1], if correct
+    - Extraction Method (Is it correct or not to extract using this method?):
+        [0], if it is wrong
+        [1], if correct
+4. In case of more the one obligation structure is identified:
+    - There will be one distinct validation space for each obligation.
+    - To better distinguish which is which, we presented in the top of each the "Predicate" corresponding to that obligation.
+
+5. Save this file and go to next file.

@@ -1,0 +1,30 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    @DATASET
+Article:    @ARTICLE
+Paragraph:  @PARAGRAPH
+Sentence:   @SENTENCE
+LLM Model:  @LLM_MODEL
+Prompt:     @PROMPT
+Timestamp:  @TIMESTAMP
+In Tokens:  @INPUT_TOKENS
+Out Tokens: @OUTPUT_TOKENS
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+@LLM_INPUT
+```
+
+## LLM Output
+```
+@LLM_OUTPUT
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+@OBLIGATION_STRUCTURE_VALIDATION
