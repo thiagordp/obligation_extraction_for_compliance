@@ -1,0 +1,100 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    041
+Paragraph:  006
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:57:56
+In Tokens:  5367
+Out Tokens: 233
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Where a Member State considers that a common specification does not entirely meet the requirements set out in Section 2 or, as applicable, comply with obligations set out in Sections 2 and 3 of Chapter V, it shall inform the Commission thereof with a detailed explanation.
+
+
+## Context (Surrounding text where the sentence appears)
+5.   Where providers of high-risk AI systems or general-purpose AI models do not comply with the common specifications referred to in paragraph 1, they shall duly justify that they have adopted technical solutions that meet the requirements referred to in Section 2 of this Chapter or, as applicable, comply with the obligations set out in Sections 2 and 3 of Chapter V to a level at least equivalent thereto.
+6.   Where a Member State considers that a common specification does not entirely meet the requirements set out in Section 2 or, as applicable, comply with obligations set out in Sections 2 and 3 of Chapter V, it shall inform the Commission thereof with a detailed explanation. The Commission shall assess that information and, if appropriate, amend the implementing act establishing the common specification concerned.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "a Member State"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall inform",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the Commission"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "with a detailed explanation"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "Where a Member State considers that a common specification does not entirely meet the requirements set out in Section 2 or, as applicable, comply with obligations set out in Sections 2 and 3 of Chapter V"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall inform')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

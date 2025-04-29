@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    008
+Paragraph:  001
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:59:16
+In Tokens:  1116
+Out Tokens: 63
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Where the child is below the age of 16 years, such processing shall be lawful only if and to the extent that consent is given or authorised by the holder of parental responsibility over the child.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   Where point (a) of Article 6(1) applies, in relation to the offer of information society services directly to a child, the processing of the personal data of a child shall be lawful where the child is at least 16 years old. Where the child is below the age of 16 years, such processing shall be lawful only if and to the extent that consent is given or authorised by the holder of parental responsibility over the child. Member States may provide by law for a lower age for those purposes provided that such lower age is not below 13 years.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a condition on the lawfulness of processing personal data of a child below 16 years, requiring consent or authorization by the holder of parental responsibility, thus regulating the behavior of those processing the data."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

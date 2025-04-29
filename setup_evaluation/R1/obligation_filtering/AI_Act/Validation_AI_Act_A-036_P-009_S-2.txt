@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    036
+Paragraph:  009
+Sentence:   3
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:24:41
+In Tokens:  1220
+Out Tokens: 73
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The national competent authority or the notified body assuming the functions of the notified body affected by the change of designation shall immediately inform the Commission, the other Member States and the other notified bodies thereof.
+
+
+## Context (Surrounding text where the sentence appears)
+9.   With the exception of certificates unduly issued, and where a designation has been withdrawn, the certificates shall remain valid for a period of nine months under the following circumstances: (a) the national competent authority of the Member State in which the provider of the high-risk AI system covered by the certificate has its registered place of business has confirmed that there is no risk to health, safety or fundamental rights associated with the high-risk AI systems concerned; and (b) another notified body has confirmed in writing that it will assume immediate responsibility for those AI systems and completes its assessment within 12 months of the withdrawal of the designation. In the circumstances referred to in the first subparagraph, the national competent authority of the Member State in which the provider of the system covered by the certificate has its place of business may extend the provisional validity of the certificates for additional periods of three months, which shall not exceed 12 months in total. The national competent authority or the notified body assuming the functions of the notified body affected by the change of designation shall immediately inform the Commission, the other Member States and the other notified bodies thereof.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the national competent authority or the notified body to perform a specific action\u2014informing the Commission, other Member States, and other notified bodies immediately. It regulates their behavior by mandating this activity in response to a change of designation."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

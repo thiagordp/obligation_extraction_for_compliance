@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    077
+Paragraph:  003
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:24:41
+In Tokens:  1078
+Out Tokens: 73
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The market surveillance authority shall organise the testing with the close involvement of the requesting public authority or body within a reasonable time following the request.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   Where the documentation referred to in paragraph 1 is insufficient to ascertain whether an infringement of obligations under Union law protecting fundamental rights has occurred, the public authority or body referred to in paragraph 1 may make a reasoned request to the market surveillance authority, to organise testing of the high-risk AI system through technical means. The market surveillance authority shall organise the testing with the close involvement of the requesting public authority or body within a reasonable time following the request.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the market surveillance authority to perform a specific action\u2014organising the testing of the high-risk AI system. It regulates the authority's behavior by mandating this activity within a reasonable time following the request, indicating an obligation of action."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

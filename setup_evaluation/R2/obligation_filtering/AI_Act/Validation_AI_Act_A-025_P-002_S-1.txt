@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    025
+Paragraph:  002
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:24:41
+In Tokens:  1167
+Out Tokens: 82
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+That initial provider shall closely cooperate with new providers and shall make available the necessary information and provide the reasonably expected technical access and other assistance that are required for the fulfilment of the obligations set out in this Regulation, in particular regarding the compliance with the conformity assessment of high-risk AI systems.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   Where the circumstances referred to in paragraph 1 occur, the provider that initially placed the AI system on the market or put it into service shall no longer be considered to be a provider of that specific AI system for the purposes of this Regulation. That initial provider shall closely cooperate with new providers and shall make available the necessary information and provide the reasonably expected technical access and other assistance that are required for the fulfilment of the obligations set out in this Regulation, in particular regarding the compliance with the conformity assessment of high-risk AI systems. This paragraph shall not apply in cases where the initial provider has clearly specified that its AI system is not to be changed into a high-risk AI system and therefore does not fall under the obligation to hand over the documentation.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the initial provider to perform specific actions\u2014closely cooperate with new providers, make available necessary information, provide technical access, and offer other assistance. It regulates the initial provider's behavior by mandating these activities for the fulfilment of the obligations set out in the Regulation."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

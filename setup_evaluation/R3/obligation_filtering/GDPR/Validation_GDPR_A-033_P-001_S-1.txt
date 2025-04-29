@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    033
+Paragraph:  001
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:59:16
+In Tokens:  1086
+Out Tokens: 66
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Where the notification to the supervisory authority is not made within 72 hours, it shall be accompanied by reasons for the delay.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority competent in accordance with Article 55, unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons. Where the notification to the supervisory authority is not made within 72 hours, it shall be accompanied by reasons for the delay.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the controller to provide reasons for the delay when the notification to the supervisory authority is not made within 72 hours, thus regulating the controller's behavior by mandating this action in specific circumstances."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

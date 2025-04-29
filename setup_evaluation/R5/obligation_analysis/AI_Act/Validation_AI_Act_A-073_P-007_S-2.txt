@@ -1,0 +1,114 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    073
+Paragraph:  007
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:57:56
+In Tokens:  5800
+Out Tokens: 242
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Upon receiving a notification related to a serious incident referred to in Article 3, point (49)(c), the relevant market surveillance authority shall inform the national public authorities or bodies referred to in Article 77(1).
+
+
+## Context (Surrounding text where the sentence appears)
+6.   Following the reporting of a serious incident pursuant to paragraph 1, the provider shall, without delay, perform the necessary investigations in relation to the serious incident and the AI system concerned. This shall include a risk assessment of the incident, and corrective action. The provider shall cooperate with the competent authorities, and where relevant with the notified body concerned, during the investigations referred to in the first subparagraph, and shall not perform any investigation which involves altering the AI system concerned in a way which may affect any subsequent evaluation of the causes of the incident, prior to informing the competent authorities of such action.
+7.   Upon receiving a notification related to a serious incident referred to in Article 3, point (49)(c), the relevant market surveillance authority shall inform the national public authorities or bodies referred to in Article 77(1). The Commission shall develop dedicated guidance to facilitate compliance with the obligations set out in paragraph 1 of this Article. That guidance shall be issued by 2 August 2025, and shall be assessed regularly.
+8.   The market surveillance authority shall take appropriate measures, as provided for in Article 19 of Regulation (EU) 2019/1020, within seven days from the date it received the notification referred to in paragraph 1 of this Article, and shall follow the notification procedures as provided in that Regulation.
+
+## Citations to other paragraphs, sections, if any
+Article 77 Paragraph 1
+1.   National public authorities or bodies which supervise or enforce the respect of obligations under Union law protecting fundamental rights, including the right to non-discrimination, in relation to the use of high-risk AI systems referred to in Annex III shall have the power to request and access any documentation created or maintained under this Regulation in accessible language and format when access to that documentation is necessary for effectively fulfilling their mandates within the limits of their jurisdiction. The relevant public authority or body shall inform the market surveillance authority of the Member State concerned of any such request.
+
+
+Article 77 Paragraph 2
+2.   By 2 November 2024, each Member State shall identify the public authorities or bodies referred to in paragraph 1 and make a list of them publicly available. Member States shall notify the list to the Commission and to the other Member States, and shall keep the list up to date.
+
+
+Article 77 Paragraph 3
+3.   Where the documentation referred to in paragraph 1 is insufficient to ascertain whether an infringement of obligations under Union law protecting fundamental rights has occurred, the public authority or body referred to in paragraph 1 may make a reasoned request to the market surveillance authority, to organise testing of the high-risk AI system through technical means. The market surveillance authority shall organise the testing with the close involvement of the requesting public authority or body within a reasonable time following the request.
+
+
+Article 77 Paragraph 4
+4.   Any information or documentation obtained by the national public authorities or bodies referred to in paragraph 1 of this Article pursuant to this Article shall be treated in accordance with the confidentiality obligations set out in Article 78.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "the relevant market surveillance authority"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall inform",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the national public authorities or bodies referred to in Article 77(1)"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "Upon receiving a notification related to a serious incident referred to in Article 3, point (49)(c)"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Citation",
+            "value": "National public authorities or bodies which supervise or enforce the respect of obligations under Union law protecting fundamental rights"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [1]
+
+### Obligation 1 (Predicate: 'shall inform')
+
+1. ObligationTypeClassification: [1]
+2. Addressees:
+    - Value                      [1]
+    - Extraction Method          [1]
+3. Predicates:
+    - Value                      [1]
+    - Extraction Method          [1]
+4. Objects:
+    - Value                      [0]
+    - Extraction Method          [0]
+5. Specifications:
+    - Value                      [0]
+    - Extraction Method          [0]
+6. Pre-Conditions
+    - Value                      [1]
+    - Extraction Method          [1]
+7. Beneficiaries
+    - Value                      [1]
+    - Extraction Method          [1]
+
+

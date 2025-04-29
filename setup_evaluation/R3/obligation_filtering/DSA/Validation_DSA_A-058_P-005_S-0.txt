@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    058
+Paragraph:  005
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1122
+Out Tokens: 84
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Digital Services Coordinator of establishment shall, without undue delay and in any event not later than two months following receipt of the request pursuant to paragraph 1 or 2, communicate to the Digital Services Coordinator that sent the request, and the Board, the assessment of the suspected infringement and an explanation of any investigatory or enforcement measures taken or envisaged in relation thereto to ensure compliance with this Regulation.
+
+
+## Context (Surrounding text where the sentence appears)
+5.   The Digital Services Coordinator of establishment shall, without undue delay and in any event not later than two months following receipt of the request pursuant to paragraph 1 or 2, communicate to the Digital Services Coordinator that sent the request, and the Board, the assessment of the suspected infringement and an explanation of any investigatory or enforcement measures taken or envisaged in relation thereto to ensure compliance with this Regulation.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Digital Services Coordinator of establishment to perform a specific action\u2014communicating the assessment of the suspected infringement and an explanation of any investigatory or enforcement measures taken or envisaged. It regulates the Coordinator's behavior by mandating this activity within a specified timeframe to ensure compliance with the Regulation."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    007
+Paragraph:  003
+Sentence:   3
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:59:16
+In Tokens:  1036
+Out Tokens: 55
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Prior to giving consent, the data subject shall be informed thereof.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   The data subject shall have the right to withdraw his or her consent at any time. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal. Prior to giving consent, the data subject shall be informed thereof. It shall be as easy to withdraw as to give consent.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the entity responsible for obtaining consent to inform the data subject before consent is given, regulating their behavior and establishing a requirement for the consent process."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

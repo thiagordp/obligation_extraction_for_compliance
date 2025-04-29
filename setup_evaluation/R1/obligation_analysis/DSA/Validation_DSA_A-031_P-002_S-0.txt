@@ -1,0 +1,285 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    031
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5618
+Out Tokens: 841
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Providers of online platforms allowing consumers to conclude distance contracts with traders shall ensure that its online interface is designed and organised in a way that it allows traders to provide at least the following: (a) the information necessary for the clear and unambiguous identification of the products or the services promoted or offered to consumers located in the Union through the services of the providers; (b) any sign identifying the trader such as the trademark, symbol or logo; and, (c) where applicable, the information concerning the labelling and marking in compliance with rules of applicable Union law on product safety and product compliance.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   Providers of online platforms allowing consumers to conclude distance contracts with traders shall ensure that its online interface is designed and organised in a way that enables traders to comply with their obligations regarding pre-contractual information, compliance and product safety information under applicable Union law. In particular, the provider concerned shall ensure that its online interface enables traders to provide information on the name, address, telephone number and email address of the economic operator, as defined in Article 3, point (13), of Regulation (EU) 2019/1020 and other Union law.
+2.   Providers of online platforms allowing consumers to conclude distance contracts with traders shall ensure that its online interface is designed and organised in a way that it allows traders to provide at least the following: (a) the information necessary for the clear and unambiguous identification of the products or the services promoted or offered to consumers located in the Union through the services of the providers; (b) any sign identifying the trader such as the trademark, symbol or logo; and, (c) where applicable, the information concerning the labelling and marking in compliance with rules of applicable Union law on product safety and product compliance.
+3.   Providers of online platforms allowing consumers to conclude distance contracts with traders shall make best efforts to assess whether such traders have provided the information referred to in paragraphs 1 and 2 prior to allowing them to offer their products or services on those platforms. After allowing the trader to offer products or services on its online platform that allows consumers to conclude distance contracts with traders, the provider shall make reasonable efforts to randomly check in any official, freely accessible and machine-readable online database or online interface whether the products or services offered have been identified as illegal.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "Providers of online platforms"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall ensure",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "its online interface"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "is designed and organised in a way that it allows traders to provide at least the following"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "traders"
+         },
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "consumers"
+         }
+      ]
+   },
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "traders"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "provide",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the information necessary for the clear and unambiguous identification of the products or the services promoted or offered to consumers"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "located in the Union through the services of the providers"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "consumers"
+         }
+      ]
+   },
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "traders"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "provide",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "any sign identifying the trader such as the trademark, symbol or logo"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "consumers"
+         }
+      ]
+   },
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "traders"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "provide",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the information concerning the labelling and marking in compliance with rules of applicable Union law on product safety and product compliance"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "where applicable"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "consumers"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall ensure')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+### Obligation 2 (Predicate: 'provide')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+### Obligation 3 (Predicate: 'provide')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+### Obligation 4 (Predicate: 'provide')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

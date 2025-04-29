@@ -1,0 +1,109 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    052
+Paragraph:  001
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:57:56
+In Tokens:  5640
+Out Tokens: 218
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Where a general-purpose AI model meets the condition referred to in Article 51(1), point (a), the relevant provider shall notify the Commission without delay and in any event within two weeks after that requirement is met or it becomes known that it will be met.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   Where a general-purpose AI model meets the condition referred to in Article 51(1), point (a), the relevant provider shall notify the Commission without delay and in any event within two weeks after that requirement is met or it becomes known that it will be met. That notification shall include the information necessary to demonstrate that the relevant requirement has been met. If the Commission becomes aware of a general-purpose AI model presenting systemic risks of which it has not been notified, it may decide to designate it as a model with systemic risk.
+2.   The provider of a general-purpose AI model that meets the condition referred to in Article 51(1), point (a), may present, with its notification, sufficiently substantiated arguments to demonstrate that, exceptionally, although it meets that requirement, the general-purpose AI model does not present, due to its specific characteristics, systemic risks and therefore should not be classified as a general-purpose AI model with systemic risk.
+
+## Citations to other paragraphs, sections, if any
+Article 51 Paragraph 1
+1.   A general-purpose AI model shall be classified as a general-purpose AI model with systemic risk if it meets any of the following conditions: (a) it has high impact capabilities evaluated on the basis of appropriate technical tools and methodologies, including indicators and benchmarks; (b) based on a decision of the Commission, ex officio or following a qualified alert from the scientific panel, it has capabilities or an impact equivalent to those set out in point (a) having regard to the criteria set out in Annex XIII.
+
+
+Article 51 Paragraph 2
+2.   A general-purpose AI model shall be presumed to have high impact capabilities pursuant to paragraph 1, point (a), when the cumulative amount of computation used for its training measured in floating point operations is greater than 1025.
+
+
+Article 51 Paragraph 3
+3.   The Commission shall adopt delegated acts in accordance with Article 97 to amend the thresholds listed in paragraphs 1 and 2 of this Article, as well as to supplement benchmarks and indicators in light of evolving technological developments, such as algorithmic improvements or increased hardware efficiency, when necessary, for these thresholds to reflect the state of the art.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "the relevant provider"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall notify",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the Commission"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "without delay and in any event within two weeks"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "Where a general-purpose AI model meets the condition referred to in Article 51(1), point (a)"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [1]
+
+### Obligation 1 (Predicate: 'shall notify')
+
+1. ObligationTypeClassification: [1]
+2. Addressees:
+    - Value                      [1]
+    - Extraction Method          [1]
+3. Predicates:
+    - Value                      [1]
+    - Extraction Method          [1]
+4. Objects:
+    - Value                      [0]
+    - Extraction Method          [0]
+5. Specifications:
+    - Value                      [0]
+    - Extraction Method          [1]
+6. Pre-Conditions
+    - Value                      [1]
+    - Extraction Method          [1]
+7. Beneficiaries
+    - Value                      [0]
+    - Extraction Method          [0]
+
+

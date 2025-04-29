@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    093
+Paragraph:  003
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:59:16
+In Tokens:  1030
+Out Tokens: 69
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Where reference is made to this paragraph, Article 8 of Regulation (EU) No 182/2011, in conjunction with Article 5 thereof, shall apply.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   Where reference is made to this paragraph, Article 8 of Regulation (EU) No 182/2011, in conjunction with Article 5 thereof, shall apply.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Constitutive statement",
+   "justification": "The statement establishes the applicability of a specific regulation (Article 8 of Regulation (EU) No 182/2011) in conjunction with another (Article 5 thereof), thereby defining the legal framework that applies under the given conditions."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

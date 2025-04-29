@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    053
+Paragraph:  002
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:24:41
+In Tokens:  1068
+Out Tokens: 59
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+This exception shall not apply to general-purpose AI models with systemic risks.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   The obligations set out in paragraph 1, points (a) and (b), shall not apply to providers of AI models that are released under a free and open-source licence that allows for the access, usage, modification, and distribution of the model, and whose parameters, including the weights, the information on the model architecture, and the information on model usage, are made publicly available. This exception shall not apply to general-purpose AI models with systemic risks.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic prohibition",
+   "justification": "This statement imposes a prohibition or restriction on the application of an exception, specifically stating that it shall not apply to general-purpose AI models with systemic risks, thus establishing a negative requirement on something."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

@@ -1,0 +1,130 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    022
+Paragraph:  003
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  6054
+Out Tokens: 323
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Trusted flaggers shall publish, at least once a year easily comprehensible and detailed reports on notices submitted in accordance with Article 16 during the relevant period.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   The status of ‘trusted flagger’ under this Regulation shall be awarded, upon application by any entity, by the Digital Services Coordinator of the Member State in which the applicant is established, to an applicant that has demonstrated that it meets all of the following conditions: (a) it has particular expertise and competence for the purposes of detecting, identifying and notifying illegal content; (b) it is independent from any provider of online platforms; (c) it carries out its activities for the purposes of submitting notices diligently, accurately and objectively.
+3.   Trusted flaggers shall publish, at least once a year easily comprehensible and detailed reports on notices submitted in accordance with Article 16 during the relevant period. The report shall list at least the number of notices categorised by: (a) the identity of the provider of hosting services, (b) the type of allegedly illegal content notified, (c) the action taken by the provider. Those reports shall include an explanation of the procedures in place to ensure that the trusted flagger retains its independence. Trusted flaggers shall send those reports to the awarding Digital Services Coordinator, and shall make them publicly available. The information in those reports shall not contain personal data.
+4.   Digital Services Coordinators shall communicate to the Commission and the Board the names, addresses and email addresses of the entities to which they have awarded the status of the trusted flagger in accordance with paragraph 2 or whose trusted flagger status they have suspended in accordance with paragraph 6 or revoked in accordance with paragraph 7.
+
+## Citations to other paragraphs, sections, if any
+Article 16 Paragraph 1
+1.   Providers of hosting services shall put mechanisms in place to allow any individual or entity to notify them of the presence on their service of specific items of information that the individual or entity considers to be illegal content. Those mechanisms shall be easy to access and user-friendly, and shall allow for the submission of notices exclusively by electronic means.
+
+
+Article 16 Paragraph 2
+2.   The mechanisms referred to in paragraph 1 shall be such as to facilitate the submission of sufficiently precise and adequately substantiated notices. To that end, the providers of hosting services shall take the necessary measures to enable and to facilitate the submission of notices containing all of the following elements: (a) a sufficiently substantiated explanation of the reasons why the individual or entity alleges the information in question to be illegal content; (b) a clear indication of the exact electronic location of that information, such as the exact URL or URLs, and, where necessary, additional information enabling the identification of the illegal content adapted to the type of content and to the specific type of hosting service; (c) the name and email address of the individual or entity submitting the notice, except in the case of information considered to involve one of the offences referred to in Articles 3 to 7 of Directive 2011/93/EU; (d) a statement confirming the bona fide belief of the individual or entity submitting the notice that the information and allegations contained therein are accurate and complete.
+
+
+Article 16 Paragraph 3
+3.   Notices referred to in this Article shall be considered to give rise to actual knowledge or awareness for the purposes of Article 6 in respect of the specific item of information concerned where they allow a diligent provider of hosting services to identify the illegality of the relevant activity or information without a detailed legal examination.
+
+
+Article 16 Paragraph 4
+4.   Where the notice contains the electronic contact information of the individual or entity that submitted it, the provider of hosting services shall, without undue delay, send a confirmation of receipt of the notice to that individual or entity.
+
+
+Article 16 Paragraph 5
+5.   The provider shall also, without undue delay, notify that individual or entity of its decision in respect of the information to which the notice relates, providing information on the possibilities for redress in respect of that decision.
+
+
+Article 16 Paragraph 6
+6.   Providers of hosting services shall process any notices that they receive under the mechanisms referred to in paragraph 1 and take their decisions in respect of the information to which the notices relate, in a timely, diligent, non-arbitrary and objective manner. Where they use automated means for that processing or decision-making, they shall include information on such use in the notification referred to in paragraph 5.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "Trusted flaggers"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall publish",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "easily comprehensible and detailed reports on notices submitted in accordance with Article 16 during the relevant period"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "at least once a year"
+         },
+         {
+            "extraction_method": "Stated",
+            "value": "The report shall list at least the number of notices categorised by: (a) the identity of the provider of hosting services, (b) the type of allegedly illegal content notified, (c) the action taken by the provider"
+         },
+         {
+            "extraction_method": "Stated",
+            "value": "Those reports shall include an explanation of the procedures in place to ensure that the trusted flagger retains its independence"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "The public and the Digital Services Coordinator"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall publish')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

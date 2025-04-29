@@ -6,6 +6,7 @@ import uuid
 from pathlib import Path
 from dotenv import load_dotenv
 
+from obligation_detection import obligation_detection
 from src.validation import validation_filtering_results, validation_analysis_results
 
 # Setup
@@ -64,11 +65,19 @@ def main():
     together_client = setup_together_client()
 
     #
-    # Loading the data
+    # Obligation Detection
     #
-    dataset = load_dataset(
-        dataset_path=DATASET_PATH
+    dataset = obligation_detection(
+        url=None,
+        name=DATASET_NAME
     )
+
+    #
+    # Loading the data (if already exists)
+    #
+    #dataset = load_dataset(
+    #    dataset_path=DATASET_PATH
+    #)
 
     # For reproducibility, set a seed value here.
     # random.seed(42)
@@ -80,7 +89,7 @@ def main():
 
     random.shuffle(dataset)
     dataset = standardize_citations(dataset)
-
+    
     #
     # Obligation Filtering
     #
@@ -119,7 +128,7 @@ def post_processing():
 
 
 if __name__ == "__main__":
-    # main()
+    main()
     validation_filtering_results()
-    #validation_analysis_results()
-    # post_processing()
+    validation_analysis_results()
+    post_processing()

@@ -1,0 +1,105 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    051
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 07:49:17
+In Tokens:  5339
+Out Tokens: 222
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Each supervisory authority shall contribute to the consistent application of this Regulation throughout the Union.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   Each Member State shall provide for one or more independent public authorities to be responsible for monitoring the application of this Regulation, in order to protect the fundamental rights and freedoms of natural persons in relation to processing and to facilitate the free flow of personal data within the Union (‘supervisory authority’).
+2.   Each supervisory authority shall contribute to the consistent application of this Regulation throughout the Union. For that purpose, the supervisory authorities shall cooperate with each other and the Commission in accordance with Chapter VII.
+3.   Where more than one supervisory authority is established in a Member State, that Member State shall designate the supervisory authority which is to represent those authorities in the Board and shall set out the mechanism to ensure compliance by the other authorities with the rules relating to the consistency mechanism referred to in Article 63.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "Each supervisory authority"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall contribute",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "to the consistent application of this Regulation"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "throughout the Union"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Context",
+            "value": "natural persons in relation to processing"
+         },
+         {
+            "extraction_method": "Context",
+            "value": "the Union"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall contribute')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

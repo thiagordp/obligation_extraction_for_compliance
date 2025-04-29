@@ -1,0 +1,100 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    082
+Paragraph:  003
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5389
+Out Tokens: 229
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+When a national court rules on a matter which is already the subject matter of a decision adopted by the Commission under this Regulation, that national court shall not take any decision which runs counter to that Commission decision.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   Where the coherent application of this Regulation so requires, the Commission, acting on its own initiative, may submit written observations to the competent judicial authority referred to Article 51(3). With the permission of the judicial authority in question, it may also make oral observations. For the purpose of the preparation of its observations only, the Commission may request that judicial authority to transmit or ensure the transmission to it of any documents necessary for the assessment of the case.
+3.   When a national court rules on a matter which is already the subject matter of a decision adopted by the Commission under this Regulation, that national court shall not take any decision which runs counter to that Commission decision. National courts shall also avoid taking decisions which could conflict with a decision contemplated by the Commission in proceedings it has initiated under this Regulation. To that effect, a national court may assess whether it is necessary to stay its proceedings. This is without prejudice to Article 267 TFEU.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "that national court"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall not take any decision",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "a decision which runs counter to that Commission decision"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "When a national court rules on a matter which is already the subject matter of a decision adopted by the Commission under this Regulation"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "The Commission and the European Union"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall not take any decision')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

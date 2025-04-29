@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    032
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1106
+Out Tokens: 67
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Where, in the situation referred to in paragraph 1, the provider of the online platform allowing consumers to conclude distance contracts with traders does not have the contact details of all consumers concerned, that provider shall make publicly available and easily accessible on its online interface the information concerning the illegal product or service, the identity of the trader and any relevant means of redress.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   Where, in the situation referred to in paragraph 1, the provider of the online platform allowing consumers to conclude distance contracts with traders does not have the contact details of all consumers concerned, that provider shall make publicly available and easily accessible on its online interface the information concerning the illegal product or service, the identity of the trader and any relevant means of redress.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the provider of the online platform to perform a specific action\u2014making certain information publicly available and easily accessible on its online interface. It regulates the provider's behavior by mandating this activity under specific conditions."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

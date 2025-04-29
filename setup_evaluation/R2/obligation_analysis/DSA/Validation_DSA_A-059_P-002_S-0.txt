@@ -1,0 +1,102 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    059
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5622
+Out Tokens: 210
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Commission shall assess the matter within two months following the referral of the matter pursuant to paragraph 1, after having consulted the Digital Services Coordinator of establishment.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   In the absence of a communication within the period laid down in Article 58(5), in the case of a disagreement of the Board with the assessment or the measures taken or envisaged pursuant to Article 58(5) or in the cases referred to in Article 60(3), the Board may refer the matter to the Commission, providing all relevant information. That information shall include at least the request or recommendation sent to the Digital Services Coordinator of establishment, the assessment by that Digital Services Coordinator, the reasons for the disagreement and any additional information supporting the referral.
+2.   The Commission shall assess the matter within two months following the referral of the matter pursuant to paragraph 1, after having consulted the Digital Services Coordinator of establishment.
+3.   Where, pursuant to paragraph 2 of this Article, the Commission considers that the assessment or the investigatory or enforcement measures taken or envisaged pursuant to Article 58(5) are insufficient to ensure effective enforcement or otherwise incompatible with this Regulation, it shall communicate its views to the Digital Services Coordinator of establishment and the Board and request the Digital Services Coordinator of establishment to review the matter. The Digital Services Coordinator of establishment shall take the necessary investigatory or enforcement measures to ensure compliance with this Regulation, taking utmost account of the views and request for review by the Commission. The Digital Services Coordinator of establishment shall inform the Commission, as well as the requesting Digital Services Coordinator or the Board that took action pursuant to Article 58(1) or (2), about the measures taken within two months from that request for review.
+
+## Citations to other paragraphs, sections, if any
+Article 59 Paragraph 1
+1.   In the absence of a communication within the period laid down in Article 58(5), in the case of a disagreement of the Board with the assessment or the measures taken or envisaged pursuant to Article 58(5) or in the cases referred to in Article 60(3), the Board may refer the matter to the Commission, providing all relevant information. That information shall include at least the request or recommendation sent to the Digital Services Coordinator of establishment, the assessment by that Digital Services Coordinator, the reasons for the disagreement and any additional information supporting the referral.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Commission"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall assess",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the matter"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "within two months following the referral of the matter pursuant to paragraph 1"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "after having consulted the Digital Services Coordinator of establishment"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall assess')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

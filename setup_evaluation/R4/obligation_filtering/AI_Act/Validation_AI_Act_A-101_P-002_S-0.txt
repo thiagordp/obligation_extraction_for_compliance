@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    101
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:24:41
+In Tokens:  1032
+Out Tokens: 74
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Before adopting the decision pursuant to paragraph 1, the Commission shall communicate its preliminary findings to the provider of the general-purpose AI model and give it an opportunity to be heard.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   Before adopting the decision pursuant to paragraph 1, the Commission shall communicate its preliminary findings to the provider of the general-purpose AI model and give it an opportunity to be heard.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Commission to perform a specific action\u2014communicating its preliminary findings to the provider of the general-purpose AI model and giving it an opportunity to be heard. It regulates the Commission\u2019s behavior by mandating this activity before adopting a decision."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

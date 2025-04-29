@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    045
+Paragraph:  009
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:59:16
+In Tokens:  1066
+Out Tokens: 67
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Decisions adopted by the Commission on the basis of Article 25(6) of Directive 95/46/EC shall remain in force until amended, replaced or repealed by a Commission Decision adopted in accordance with paragraph 3 or 5 of this Article.
+
+
+## Context (Surrounding text where the sentence appears)
+9.   Decisions adopted by the Commission on the basis of Article 25(6) of Directive 95/46/EC shall remain in force until amended, replaced or repealed by a Commission Decision adopted in accordance with paragraph 3 or 5 of this Article.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Constitutive statement",
+   "justification": "The statement establishes the status or effect of decisions adopted by the Commission, determining their validity and duration until they are amended, replaced, or repealed, thus bringing into effect a new state of affairs regarding the legal force of these decisions."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

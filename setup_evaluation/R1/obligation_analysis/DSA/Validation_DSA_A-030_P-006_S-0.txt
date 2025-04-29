@@ -1,0 +1,126 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    030
+Paragraph:  006
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  6428
+Out Tokens: 221
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Without prejudice to paragraph 2 of this Article, the provider of the online platform allowing consumers to conclude distance contracts with traders shall only disclose the information to third parties where so required in accordance with the applicable law, including the orders referred to in Article 10 and any orders issued by Member States’ competent authorities or the Commission for the performance of their tasks under this Regulation.
+
+
+## Context (Surrounding text where the sentence appears)
+5.   Providers of online platforms allowing consumers to conclude distance contracts with traders shall store the information obtained pursuant to paragraphs 1 and 2 in a secure manner for a period of six months after the end of the contractual relationship with the trader concerned. They shall subsequently delete the information.
+6.   Without prejudice to paragraph 2 of this Article, the provider of the online platform allowing consumers to conclude distance contracts with traders shall only disclose the information to third parties where so required in accordance with the applicable law, including the orders referred to in Article 10 and any orders issued by Member States’ competent authorities or the Commission for the performance of their tasks under this Regulation.
+7.   The provider of the online platform allowing consumers to conclude distance contracts with traders shall make the information referred to in paragraph 1, points (a), (d) and (e) available on its online platform to the recipients of the service in a clear, easily accessible and comprehensible manner. That information shall be available at least on the online platform’s online interface where the information on the product or service is presented.
+
+## Citations to other paragraphs, sections, if any
+Article 10 Paragraph 1
+1.   Upon receipt of an order to provide specific information about one or more specific individual recipients of the service, issued by the relevant national judicial or administrative authorities on the basis of the applicable Union law or national law in compliance with Union law, providers of intermediary services shall, without undue delay inform the authority issuing the order, or any other authority specified in the order, of its receipt and of the effect given to the order, specifying if and when effect was given to the order.
+
+
+Article 10 Paragraph 2
+2.   Member States shall ensure that when an order referred to in paragraph 1 is transmitted to the provider, it meets at least the following conditions: (a) that order contains the following elements: (i) a reference to the legal basis under Union or national law for the order; (ii) information identifying the issuing authority; (iii) clear information enabling the provider of intermediary services to identify the specific recipient or recipients on whom information is sought, such as one or more account names or unique identifiers; (iv) a statement of reasons explaining the objective for which the information is required and why the requirement to provide the information is necessary and proportionate to determine compliance by the recipients of the intermediary services with applicable Union law or national law in compliance with Union law, unless such a statement cannot be provided for reasons related to the prevention, investigation, detection and prosecution of criminal offences; (v) information about redress mechanisms available to the provider and to the recipients of the service concerned; (vi) where applicable, information about which authority is to receive the information about the effect given to the orders; (b) that order only requires the provider to provide information already collected for the purposes of providing the service and which lies within its control; (c) that order is transmitted in one of the languages declared by the provider of intermediary services pursuant to Article 11(3) or in another official language of the Member States, agreed between the authority issuing the order and the provider, and is sent to the electronic point of contact designated by that provider, in accordance with Article 11; where the order is not drafted in the language declared by the provider of intermediary services or in another bilaterally agreed language, the order may be transmitted in the language of the authority issuing the order, provided that it is accompanied by a translation into such declared or bilaterally agreed language of at least the elements set out in points (a) and (b) of this paragraph.
+
+
+Article 10 Paragraph 3
+3.   The authority issuing the order or, where applicable, the authority specified therein, shall transmit it, along with any information received from the provider of intermediary services concerning the effect given to that order to the Digital Services Coordinator from the Member State of the issuing authority.
+
+
+Article 10 Paragraph 4
+4.   After receiving the order from the judicial or administrative authority, the Digital Services Coordinator of the Member State concerned shall, without undue delay, transmit a copy of the order referred to in paragraph 1 of this Article to all Digital Services Coordinators through the system established in accordance with Article 85.
+
+
+Article 10 Paragraph 5
+5.   At the latest when effect is given to the order, or, where applicable, at the time provided by the issuing authority in its order, providers of intermediary services shall inform the recipient of the service concerned of the order received and the effect given to it. Such information provided to the recipient of the service shall include a statement of reasons and the possibilities for redress that exist, in accordance with paragraph 2.
+
+
+Article 10 Paragraph 6
+6.   The conditions and requirements laid down in this Article shall be without prejudice to national civil and criminal procedural law.
+
+
+Article 30 Paragraph 2
+2.   Upon receiving the information referred to in paragraph 1 and prior to allowing the trader concerned to use its services, the provider of the online platform allowing consumers to conclude distance contracts with traders shall, through the use of any freely accessible official online database or online interface made available by a Member State or the Union or through requests to the trader to provide supporting documents from reliable sources, make best efforts to assess whether the information referred to in paragraph 1, points (a) to (e), is reliable and complete. For the purpose of this Regulation, traders shall be liable for the accuracy of the information provided. As regards traders that are already using the services of providers of online platforms allowing consumers to conclude distance contracts with traders for the purposes referred to in paragraph 1 on 17 February 2024, the providers shall make best efforts to obtain the information listed from the traders concerned within 12 months. Where the traders concerned fail to provide the information within that period, the providers shall suspend the provision of their services to those traders until they have provided all information.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "the provider of the online platform allowing consumers to conclude distance contracts with traders"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall only disclose",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the information"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "to third parties where so required in accordance with the applicable law"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "Without prejudice to paragraph 2 of this Article"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall only disclose')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

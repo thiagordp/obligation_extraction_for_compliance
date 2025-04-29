@@ -1,0 +1,105 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    011
+Paragraph:  001
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5459
+Out Tokens: 242
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Providers of intermediary services shall designate a single point of contact to enable them to communicate directly, by electronic means, with Member States’ authorities, the Commission and the Board referred to in Article 61 for the application of this Regulation.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   Providers of intermediary services shall designate a single point of contact to enable them to communicate directly, by electronic means, with Member States’ authorities, the Commission and the Board referred to in Article 61 for the application of this Regulation.
+2.   Providers of intermediary services shall make public the information necessary to easily identify and communicate with their single points of contact. That information shall be easily accessible, and shall be kept up to date.
+
+## Citations to other paragraphs, sections, if any
+Article 61 Paragraph 1
+1.   An independent advisory group of Digital Services Coordinators on the supervision of providers of intermediary services named ‘European Board for Digital Services’ (the ‘Board’) is established.
+
+
+Article 61 Paragraph 2
+2.   The Board shall advise the Digital Services Coordinators and the Commission in accordance with this Regulation to achieve the following objectives: (a) contributing to the consistent application of this Regulation and effective cooperation of the Digital Services Coordinators and the Commission with regard to matters covered by this Regulation; (b) coordinating and contributing to guidelines and analysis of the Commission and Digital Services Coordinators and other competent authorities on emerging issues across the internal market with regard to matters covered by this Regulation; (c) assisting the Digital Services Coordinators and the Commission in the supervision of very large online platforms.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "Providers of intermediary services"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall designate",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "a single point of contact"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "to enable them to communicate directly, by electronic means, with Member States\u2019 authorities, the Commission and the Board referred to in Article 61 for the application of this Regulation"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "Member States\u2019 authorities, the Commission and the Board referred to in Article 61"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall designate')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

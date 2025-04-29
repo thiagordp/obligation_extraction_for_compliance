@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    041
+Paragraph:  002
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1221
+Out Tokens: 84
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The management body of the provider of the very large online platform or of the very large online search engine shall ensure that the head of the compliance function is an independent senior manager with distinct responsibility for the compliance function.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   The management body of the provider of the very large online platform or of the very large online search engine shall ensure that compliance officers have the professional qualifications, knowledge, experience and ability necessary to fulfil the tasks referred to in paragraph 3. The management body of the provider of the very large online platform or of the very large online search engine shall ensure that the head of the compliance function is an independent senior manager with distinct responsibility for the compliance function. The head of the compliance function shall report directly to the management body of the provider of the very large online platform or of the very large online search engine, and may raise concerns and warn that body where risks referred to in Article 34 or non-compliance with this Regulation affect or may affect the provider of the very large online platform or of the very large online search engine concerned, without prejudice to the responsibilities of the management body in its supervisory and managerial functions. The head of the compliance function shall not be removed without prior approval of the management body of the provider of the very large online platform or of the very large online search engine.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the management body of the provider to ensure that the head of the compliance function meets specific criteria, namely being an independent senior manager with distinct responsibility for the compliance function. It regulates the management body's behavior by mandating this action to guarantee the independence and capability of the compliance function."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

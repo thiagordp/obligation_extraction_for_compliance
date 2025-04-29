@@ -1,0 +1,122 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    069
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:57:56
+In Tokens:  5980
+Out Tokens: 266
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The structure and the level of fees as well as the scale and structure of recoverable costs shall be set out in the implementing act referred to in Article 68(1), taking into account the objectives of the adequate implementation of this Regulation, cost-effectiveness and the necessity of ensuring effective access to experts for all Member States.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   Member States may call upon experts of the scientific panel to support their enforcement activities under this Regulation.
+2.   The Member States may be required to pay fees for the advice and support provided by the experts. The structure and the level of fees as well as the scale and structure of recoverable costs shall be set out in the implementing act referred to in Article 68(1), taking into account the objectives of the adequate implementation of this Regulation, cost-effectiveness and the necessity of ensuring effective access to experts for all Member States.
+3.   The Commission shall facilitate timely access to the experts by the Member States, as needed, and ensure that the combination of support activities carried out by Union AI testing support pursuant to Article 84 and experts pursuant to this Article is efficiently organised and provides the best possible added value.
+
+## Citations to other paragraphs, sections, if any
+Article 68 Paragraph 1
+1.   The Commission shall, by means of an implementing act, make provisions on the establishment of a scientific panel of independent experts (the ‘scientific panel’) intended to support the enforcement activities under this Regulation. That implementing act shall be adopted in accordance with the examination procedure referred to in Article 98(2).
+
+
+Article 68 Paragraph 2
+2.   The scientific panel shall consist of experts selected by the Commission on the basis of up-to-date scientific or technical expertise in the field of AI necessary for the tasks set out in paragraph 3, and shall be able to demonstrate meeting all of the following conditions: (a) having particular expertise and competence and scientific or technical expertise in the field of AI; (b) independence from any provider of AI systems or general-purpose AI models; (c) an ability to carry out activities diligently, accurately and objectively. The Commission, in consultation with the Board, shall determine the number of experts on the panel in accordance with the required needs and shall ensure fair gender and geographical representation.
+
+
+Article 68 Paragraph 3
+3.   The scientific panel shall advise and support the AI Office, in particular with regard to the following tasks: (a) supporting the implementation and enforcement of this Regulation as regards general-purpose AI models and systems, in particular by: (i) alerting the AI Office of possible systemic risks at Union level of general-purpose AI models, in accordance with Article 90; (ii) contributing to the development of tools and methodologies for evaluating capabilities of general-purpose AI models and systems, including through benchmarks; (iii) providing advice on the classification of general-purpose AI models with systemic risk; (iv) providing advice on the classification of various general-purpose AI models and systems; (v) contributing to the development of tools and templates; (b) supporting the work of market surveillance authorities, at their request; (c) supporting cross-border market surveillance activities as referred to in Article 74(11), without prejudice to the powers of market surveillance authorities; (d) supporting the AI Office in carrying out its duties in the context of the Union safeguard procedure pursuant to Article 81.
+
+
+Article 68 Paragraph 4
+4.   The experts on the scientific panel shall perform their tasks with impartiality and objectivity, and shall ensure the confidentiality of information and data obtained in carrying out their tasks and activities. They shall neither seek nor take instructions from anyone when exercising their tasks under paragraph 3. Each expert shall draw up a declaration of interests, which shall be made publicly available. The AI Office shall establish systems and procedures to actively manage and prevent potential conflicts of interest.
+
+
+Article 68 Paragraph 5
+5.   The implementing act referred to in paragraph 1 shall include provisions on the conditions, procedures and detailed arrangements for the scientific panel and its members to issue alerts, and to request the assistance of the AI Office for the performance of the tasks of the scientific panel.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Commission"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall set out",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the structure and the level of fees as well as the scale and structure of recoverable costs"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "in the implementing act referred to in Article 68(1)"
+         },
+         {
+            "extraction_method": "Stated",
+            "value": "taking into account the objectives of the adequate implementation of this Regulation, cost-effectiveness and the necessity of ensuring effective access to experts for all Member States"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "Member States"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [1]
+
+### Obligation 1 (Predicate: 'shall set out')
+
+1. ObligationTypeClassification: [1]
+2. Addressees:
+    - Value                      [1]
+    - Extraction Method          [0]
+3. Predicates:
+    - Value                      [1]
+    - Extraction Method          [0]
+4. Objects:
+    - Value                      [1]
+    - Extraction Method          [1]
+5. Specifications:
+    - Value                      [1]
+    - Extraction Method          [1]
+6. Pre-Conditions
+    - Value                      [1]
+    - Extraction Method          [1]
+7. Beneficiaries
+    - Value                      [1]
+    - Extraction Method          [1]
+
+

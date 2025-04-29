@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    005
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1034
+Out Tokens: 74
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+This Article shall not affect the possibility for a judicial or administrative authority, in accordance with a Member State’s legal system, to require the service provider to terminate or prevent an infringement.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   This Article shall not affect the possibility for a judicial or administrative authority, in accordance with a Member State’s legal system, to require the service provider to terminate or prevent an infringement.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Constitutive statement",
+   "justification": "The statement establishes the scope or effect of the Article, clarifying that it does not limit the authority of judicial or administrative bodies in Member States to address infringements, thus bringing into effect a new state of affairs regarding the relationship between this Article and existing legal frameworks."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

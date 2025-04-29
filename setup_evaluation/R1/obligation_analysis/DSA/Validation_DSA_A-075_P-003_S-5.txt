@@ -1,0 +1,101 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    075
+Paragraph:  003
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5721
+Out Tokens: 211
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Within one month following receipt of the action plan, the Board shall communicate its opinion on the action plan to the Commission.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   In the decision referred to in Article 73, the Commission shall require the provider of a very large online platform or of a very large online search engine concerned to draw up and communicate, within a reasonable period specified in the decision, to the Digital Services Coordinators, the Commission and the Board an action plan setting out the necessary measures which are sufficient to terminate or remedy the infringement. Those measures shall include a commitment to perform an independent audit in accordance with Article 37(3) and (4) on the implementation of the other measures, and shall specify the identity of the auditors, as well as the methodology, timing and follow-up of the audit. The measures may also include, where appropriate, a commitment to participate in a relevant code of conduct, as provided for in Article 45.
+3.   Within one month following receipt of the action plan, the Board shall communicate its opinion on the action plan to the Commission. Within one month following receipt of that opinion, the Commission shall decide whether the measures set out in the action plan are sufficient to terminate or remedy the infringement, and shall set a reasonable period for its implementation. The possible commitment to adhere to relevant codes of conduct shall be taken into account in that decision. The Commission shall subsequently monitor the implementation of the action plan. To that end, the provider of a very large online platform or of a very large online search engine concerned shall communicate the audit report to the Commission without undue delay after it becomes available, and shall keep the Commission up to date on steps taken to implement the action plan. The Commission may, where necessary for such monitoring, require the provider of a very large online platform or of a very large online search engine concerned to provide additional information within a reasonable period set by the Commission. The Commission shall keep the Board and the Digital Services Coordinators informed about the implementation of the action plan, and about its monitoring thereof.
+4.   The Commission may take necessary measures in accordance with this Regulation, in particular Article 76(1), point (e), and Article 82(1), where: (a) the provider of the very large online platform or of the very large online search engine concerned fails to provide any action plan, the audit report, the necessary updates or any additional information required, within the applicable period; (b) the Commission rejects the proposed action plan because it considers that the measures set out therein are insufficient to terminate or remedy the infringement; or (c) the Commission considers, on the basis of the audit report, any updates or additional information provided or any other relevant information available to it, that the implementation of the action plan is insufficient to terminate or remedy the infringement.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "the Board"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall communicate",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "its opinion on the action plan"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "within one month following receipt of the action plan"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "within one month following receipt of the action plan"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "the Commission"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall communicate')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

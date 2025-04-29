@@ -1,0 +1,126 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    043
+Paragraph:  003
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  6471
+Out Tokens: 240
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The providers of very large online platforms and of very large online search engines shall be charged annually a supervisory fee for each service for which they have been designated pursuant to Article 33.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   The overall amount of the annual supervisory fees shall cover the estimated costs that the Commission incurs in relation to its supervisory tasks under this Regulation, in particular costs related to the designation pursuant to Article 33, to the set-up, maintenance and operation of the database pursuant to Article 24(5) and to the information sharing system pursuant to Article 85, to referrals pursuant to Article 59, to supporting the Board pursuant to Article 62 and to the supervisory tasks pursuant to Article 56 and Section 4 of Chapter IV.
+3.   The providers of very large online platforms and of very large online search engines shall be charged annually a supervisory fee for each service for which they have been designated pursuant to Article 33. The Commission shall adopt implementing acts establishing the amount of the annual supervisory fee in respect of each provider of very large online platform or of very large online search engine. When adopting those implementing acts, the Commission shall apply the methodology laid down in the delegated act referred to in paragraph 4 of this Article and shall respect the principles set out in paragraph 5 of this Article. Those implementing acts shall be adopted in accordance with the advisory procedure referred to in Article 88.
+4.   The Commission shall adopt delegated acts, in accordance with Article 87, laying down the detailed methodology and procedures for: (a) the determination of the estimated costs referred to in paragraph 2; (b) the determination of the individual annual supervisory fees referred to in paragraph 5, points (b) and (c); (c) the determination of the maximum overall limit defined in paragraph 5, point (c); and (d) the detailed arrangements necessary to make payments. When adopting those delegated acts, the Commission shall respect the principles set out in paragraph 5 of this Article.
+
+## Citations to other paragraphs, sections, if any
+Article 33 Paragraph 1
+1.   This Section shall apply to online platforms and online search engines which have a number of average monthly active recipients of the service in the Union equal to or higher than 45 million, and which are designated as very large online platforms or very large online search engines pursuant to paragraph 4.
+
+
+Article 33 Paragraph 2
+2.   The Commission shall adopt delegated acts in accordance with Article 87 to adjust the number of average monthly active recipients of the service in the Union referred to in paragraph 1, where the Union’s population increases or decreases at least by 5 % in relation to its population in 2020 or its population after adjustment by means of a delegated act in the year in which the latest delegated act was adopted. In such a case, it shall adjust the number so that it corresponds to 10 % of the Union’s population in the year in which it adopts the delegated act, rounded up or down to allow the number to be expressed in millions.
+
+
+Article 33 Paragraph 3
+3.   The Commission may adopt delegated acts in accordance with Article 87, after consulting the Board, to supplement the provisions of this Regulation by laying down the methodology for calculating the number of average monthly active recipients of the service in the Union, for the purposes of paragraph 1 of this Article and Article 24(2), ensuring that the methodology takes account of market and technological developments.
+
+
+Article 33 Paragraph 4
+4.   The Commission shall, after having consulted the Member State of establishment or after taking into account the information provided by the Digital Services Coordinator of establishment pursuant to Article 24(4), adopt a decision designating as a very large online platform or a very large online search engine for the purposes of this Regulation the online platform or the online search engine which has a number of average monthly active recipients of the service equal to or higher than the number referred to in paragraph 1 of this Article. The Commission shall take its decision on the basis of data reported by the provider of the online platform or of the online search engine pursuant to Article 24(2), or information requested pursuant to Article 24(3) or any other information available to the Commission. The failure by the provider of the online platform or of the online search engine to comply with Article 24(2) or to comply with the request by the Digital Services Coordinator of establishment or by the Commission pursuant to Article 24(3) shall not prevent the Commission from designating that provider as a provider of a very large online platform or of a very large online search engine pursuant to this paragraph. Where the Commission bases its decision on other information available to the Commission pursuant to the first subparagraph of this paragraph or on the basis of additional information requested pursuant to Article 24(3), the Commission shall give the provider of the online platform or of the online search engine concerned 10 working days in which to submit its views on the Commission’s preliminary findings and on its intention to designate the online platform or the online search engine as a very large online platform or as a very large online search engine, respectively. The Commission shall take due account of the views submitted by the provider concerned. The failure of the provider of the online platform or of the online search engine concerned to submit its views pursuant to the third subparagraph shall not prevent the Commission from designating that online platform or that online search engine as a very large online platform or as a very large online search engine, respectively, based on other information available to it.
+
+
+Article 33 Paragraph 5
+5.   The Commission shall terminate the designation if, during an uninterrupted period of one year, the online platform or the online search engine does not have a number of average monthly active recipients of the service equal to or higher than the number referred to in paragraph 1.
+
+
+Article 33 Paragraph 6
+6.   The Commission shall notify its decisions pursuant to paragraphs 4 and 5, without undue delay, to the provider of the online platform or of the online search engine concerned, to the Board and to the Digital Services Coordinator of establishment. The Commission shall ensure that the list of designated very large online platforms and very large online search engines is published in the Official Journal of the European Union, and shall keep that list up to date. The obligations set out in this Section shall apply, or cease to apply, to the very large online platforms and very large online search engines concerned from four months after the notification to the provider concerned referred to in the first subparagraph.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The providers of very large online platforms and of very large online search engines"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall be charged",
+         "verb": "passive"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "a supervisory fee"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "annually"
+         },
+         {
+            "extraction_method": "Stated",
+            "value": "for each service for which they have been designated pursuant to Article 33"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "The Commission"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall be charged')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

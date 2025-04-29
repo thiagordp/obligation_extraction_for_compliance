@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    051
+Paragraph:  002
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:59:16
+In Tokens:  1023
+Out Tokens: 65
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+For that purpose, the supervisory authorities shall cooperate with each other and the Commission in accordance with Chapter VII.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   Each supervisory authority shall contribute to the consistent application of this Regulation throughout the Union. For that purpose, the supervisory authorities shall cooperate with each other and the Commission in accordance with Chapter VII.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the supervisory authorities to perform a specific action\u2014cooperating with each other and the Commission. It regulates their behavior by mandating this cooperative activity to achieve consistent application of the Regulation."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

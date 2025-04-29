@@ -1,0 +1,102 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    079
+Paragraph:  006
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:57:56
+In Tokens:  5672
+Out Tokens: 274
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The notification referred to in paragraph 5 shall include all available details, in particular the information necessary for the identification of the non-compliant AI system, the origin of the AI system and the supply chain, the nature of the non-compliance alleged and the risk involved, the nature and duration of the national measures taken and the arguments put forward by the relevant operator.
+
+
+## Context (Surrounding text where the sentence appears)
+5.   Where the operator of an AI system does not take adequate corrective action within the period referred to in paragraph 2, the market surveillance authority shall take all appropriate provisional measures to prohibit or restrict the AI system’s being made available on its national market or put into service, to withdraw the product or the standalone AI system from that market or to recall it. That authority shall without undue delay notify the Commission and the other Member States of those measures.
+6.   The notification referred to in paragraph 5 shall include all available details, in particular the information necessary for the identification of the non-compliant AI system, the origin of the AI system and the supply chain, the nature of the non-compliance alleged and the risk involved, the nature and duration of the national measures taken and the arguments put forward by the relevant operator. In particular, the market surveillance authorities shall indicate whether the non-compliance is due to one or more of the following: (a) non-compliance with the prohibition of the AI practices referred to in Article 5; (b) a failure of a high-risk AI system to meet requirements set out in Chapter III, Section 2; (c) shortcomings in the harmonised standards or common specifications referred to in Articles 40 and 41 conferring a presumption of conformity; (d) non-compliance with Article 50.
+7.   The market surveillance authorities other than the market surveillance authority of the Member State initiating the procedure shall, without undue delay, inform the Commission and the other Member States of any measures adopted and of any additional information at their disposal relating to the non-compliance of the AI system concerned, and, in the event of disagreement with the notified national measure, of their objections.
+
+## Citations to other paragraphs, sections, if any
+Article 79 Paragraph 5
+5.   Where the operator of an AI system does not take adequate corrective action within the period referred to in paragraph 2, the market surveillance authority shall take all appropriate provisional measures to prohibit or restrict the AI system’s being made available on its national market or put into service, to withdraw the product or the standalone AI system from that market or to recall it. That authority shall without undue delay notify the Commission and the other Member States of those measures.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Context",
+            "value": "the market surveillance authority"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall include",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "all available details"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "in particular the information necessary for the identification of the non-compliant AI system, the origin of the AI system and the supply chain, the nature of the non-compliance alleged and the risk involved, the nature and duration of the national measures taken and the arguments put forward by the relevant operator"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Context",
+            "value": "Where the operator of an AI system does not take adequate corrective action within the period referred to in paragraph 2"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Context",
+            "value": "the Commission and the other Member States"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [1]
+
+### Obligation 1 (Predicate: 'shall include')
+
+1. ObligationTypeClassification: [1]
+2. Addressees:
+    - Value                      [1]
+    - Extraction Method          [1]
+3. Predicates:
+    - Value                      [1]
+    - Extraction Method          [1]
+4. Objects:
+    - Value                      [1]
+    - Extraction Method          [1]
+5. Specifications:
+    - Value                      [1]
+    - Extraction Method          [1]
+6. Pre-Conditions
+    - Value                      [1]
+    - Extraction Method          [1]
+7. Beneficiaries
+    - Value                      [1]
+    - Extraction Method          [1]
+
+

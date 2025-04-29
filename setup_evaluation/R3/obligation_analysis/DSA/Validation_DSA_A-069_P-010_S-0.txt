@@ -1,0 +1,101 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    069
+Paragraph:  010
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5572
+Out Tokens: 240
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Where the authorisation referred to in paragraph 9 is applied for, the national judicial authority before which a case has been brought shall verify that the Commission decision ordering the inspection is authentic and that the coercive measures envisaged are neither arbitrary nor excessive having regard to the subject matter of the inspection.
+
+
+## Context (Surrounding text where the sentence appears)
+9.   If the assistance provided for in paragraph 8 requires authorisation from a national judicial authority in accordance with the national law of the Member State concerned, such authorisation shall be applied for by the Digital Services Coordinator of that Member State at the request of the officials and other accompanying persons authorised by the Commission. Such authorisation may also be applied for as a precautionary measure.
+10.   Where the authorisation referred to in paragraph 9 is applied for, the national judicial authority before which a case has been brought shall verify that the Commission decision ordering the inspection is authentic and that the coercive measures envisaged are neither arbitrary nor excessive having regard to the subject matter of the inspection. When conducting such verification, the national judicial authority may ask the Commission, directly or through the Digital Services Coordinators of the Member State concerned, for detailed explanations, in particular those concerning the grounds on which the Commission suspects an infringement of this Regulation, concerning the seriousness of the suspected infringement and concerning the nature of the involvement of the provider of the very large online platform or of the very large online search engine or of the other person concerned. However, the national judicial authority shall not call into question the necessity for the inspection nor demand information from the case file of the Commission. The lawfulness of the Commission decision shall be subject to review only by the Court of Justice of the European Union.
+
+## Citations to other paragraphs, sections, if any
+Article 69 Paragraph 9
+9.   If the assistance provided for in paragraph 8 requires authorisation from a national judicial authority in accordance with the national law of the Member State concerned, such authorisation shall be applied for by the Digital Services Coordinator of that Member State at the request of the officials and other accompanying persons authorised by the Commission. Such authorisation may also be applied for as a precautionary measure.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "the national judicial authority"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall verify",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "that the Commission decision ordering the inspection is authentic and that the coercive measures envisaged are neither arbitrary nor excessive having regard to the subject matter of the inspection"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "having regard to the subject matter of the inspection"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "Where the authorisation referred to in paragraph 9 is applied for"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall verify')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

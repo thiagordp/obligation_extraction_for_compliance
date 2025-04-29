@@ -1,0 +1,101 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    099
+Paragraph:  008
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:57:56
+In Tokens:  5616
+Out Tokens: 207
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Each Member State shall lay down rules on to what extent administrative fines may be imposed on public authorities and bodies established in that Member State.
+
+
+## Context (Surrounding text where the sentence appears)
+7.   When deciding whether to impose an administrative fine and when deciding on the amount of the administrative fine in each individual case, all relevant circumstances of the specific situation shall be taken into account and, as appropriate, regard shall be given to the following: (a) the nature, gravity and duration of the infringement and of its consequences, taking into account the purpose of the AI system, as well as, where appropriate, the number of affected persons and the level of damage suffered by them; (b) whether administrative fines have already been applied by other market surveillance authorities to the same operator for the same infringement; (c) whether administrative fines have already been applied by other authorities to the same operator for infringements of other Union or national law, when such infringements result from the same activity or omission constituting a relevant infringement of this Regulation; (d) the size, the annual turnover and market share of the operator committing the infringement; (e) any other aggravating or mitigating factor applicable to the circumstances of the case, such as financial benefits gained, or losses avoided, directly or indirectly, from the infringement; (f) the degree of cooperation with the national competent authorities, in order to remedy the infringement and mitigate the possible adverse effects of the infringement; (g) the degree of responsibility of the operator taking into account the technical and organisational measures implemented by it; (h) the manner in which the infringement became known to the national competent authorities, in particular whether, and if so to what extent, the operator notified the infringement; (i) the intentional or negligent character of the infringement; (j) any action taken by the operator to mitigate the harm suffered by the affected persons.
+8.   Each Member State shall lay down rules on to what extent administrative fines may be imposed on public authorities and bodies established in that Member State.
+9.   Depending on the legal system of the Member States, the rules on administrative fines may be applied in such a manner that the fines are imposed by competent national courts or by other bodies, as applicable in those Member States. The application of such rules in those Member States shall have an equivalent effect.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "Each Member State"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall lay down rules",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "on to what extent administrative fines may be imposed on public authorities and bodies established in that Member State"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [1]
+
+### Obligation 1 (Predicate: 'shall lay down rules')
+
+1. ObligationTypeClassification: [1]
+2. Addressees:
+    - Value                      [1]
+    - Extraction Method          [1]
+3. Predicates:
+    - Value                      [1]
+    - Extraction Method          [1]
+4. Objects:
+    - Value                      [1]
+    - Extraction Method          [1]
+5. Specifications:
+    - Value                      [1]
+    - Extraction Method          [1]
+6. Pre-Conditions
+    - Value                      [1]
+    - Extraction Method          [1]
+7. Beneficiaries
+    - Value                      [1]
+    - Extraction Method          [1]
+
+

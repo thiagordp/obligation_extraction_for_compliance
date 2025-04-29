@@ -1,0 +1,102 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    040
+Paragraph:  009
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  6186
+Out Tokens: 216
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Upon receipt of the application pursuant to this paragraph the Digital Services Coordinator shall conduct an initial assessment as to whether the respective researchers meet all of the conditions set out in paragraph 8.
+
+
+## Context (Surrounding text where the sentence appears)
+8.   Upon a duly substantiated application from researchers, the Digital Services Coordinator of establishment shall grant such researchers the status of ‘vetted researchers’ for the specific research referred to in the application and issue a reasoned request for data access to a provider of very large online platform or of very large online search engine a pursuant to paragraph 4, where the researchers demonstrate that they meet all of the following conditions: (a) they are affiliated to a research organisation as defined in Article 2, point (1), of Directive (EU) 2019/790; (b) they are independent from commercial interests; (c) their application discloses the funding of the research; (d) they are capable of fulfilling the specific data security and confidentiality requirements corresponding to each request and to protect personal data, and they describe in their request the appropriate technical and organisational measures that they have put in place to this end; (e) their application demonstrates that their access to the data and the time frames requested are necessary for, and proportionate to, the purposes of their research, and that the expected results of that research will contribute to the purposes laid down in paragraph 4; (f) the planned research activities will be carried out for the purposes laid down in paragraph 4; (g) they have committed themselves to making their research results publicly available free of charge, within a reasonable period after the completion of the research, subject to the rights and interests of the recipients of the service concerned, in accordance with Regulation (EU) 2016/679. Upon receipt of the application pursuant to this paragraph, the Digital Services Coordinator of establishment shall inform the Commission and the Board.
+9.   Researchers may also submit their application to the Digital Services Coordinator of the Member State of the research organisation to which they are affiliated. Upon receipt of the application pursuant to this paragraph the Digital Services Coordinator shall conduct an initial assessment as to whether the respective researchers meet all of the conditions set out in paragraph 8. The respective Digital Services Coordinator shall subsequently send the application, together with the supporting documents submitted by the respective researchers and the initial assessment, to the Digital Services Coordinator of establishment. The Digital Services Coordinator of establishment shall take a decision whether to award a researcher the status of ‘vetted researcher’ without undue delay. While taking due account of the initial assessment provided, the final decision to award a researcher the status of ‘vetted researcher’ lies within the competence of Digital Services Coordinator of establishment, pursuant to paragraph 8.
+10.   The Digital Services Coordinator that awarded the status of vetted researcher and issued the reasoned request for data access to the providers of very large online platforms or of very large online search engines in favour of a vetted researcher shall issue a decision terminating the access if it determines, following an investigation either on its own initiative or on the basis of information received from third parties, that the vetted researcher no longer meets the conditions set out in paragraph 8, and shall inform the provider of the very large online platform or of the very large online search engine concerned of the decision. Before terminating the access, the Digital Services Coordinator shall allow the vetted researcher to react to the findings of its investigation and to its intention to terminate the access.
+
+## Citations to other paragraphs, sections, if any
+Article 40 Paragraph 8
+8.   Upon a duly substantiated application from researchers, the Digital Services Coordinator of establishment shall grant such researchers the status of ‘vetted researchers’ for the specific research referred to in the application and issue a reasoned request for data access to a provider of very large online platform or of very large online search engine a pursuant to paragraph 4, where the researchers demonstrate that they meet all of the following conditions: (a) they are affiliated to a research organisation as defined in Article 2, point (1), of Directive (EU) 2019/790; (b) they are independent from commercial interests; (c) their application discloses the funding of the research; (d) they are capable of fulfilling the specific data security and confidentiality requirements corresponding to each request and to protect personal data, and they describe in their request the appropriate technical and organisational measures that they have put in place to this end; (e) their application demonstrates that their access to the data and the time frames requested are necessary for, and proportionate to, the purposes of their research, and that the expected results of that research will contribute to the purposes laid down in paragraph 4; (f) the planned research activities will be carried out for the purposes laid down in paragraph 4; (g) they have committed themselves to making their research results publicly available free of charge, within a reasonable period after the completion of the research, subject to the rights and interests of the recipients of the service concerned, in accordance with Regulation (EU) 2016/679. Upon receipt of the application pursuant to this paragraph, the Digital Services Coordinator of establishment shall inform the Commission and the Board.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Digital Services Coordinator"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall conduct",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "an initial assessment"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "as to whether the respective researchers meet all of the conditions set out in paragraph 8"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "Upon receipt of the application pursuant to this paragraph"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall conduct')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

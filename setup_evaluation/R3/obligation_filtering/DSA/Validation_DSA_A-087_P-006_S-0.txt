@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    087
+Paragraph:  006
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1152
+Out Tokens: 80
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+A delegated act adopted pursuant to Articles 24, 33, 37, 40 and 43 shall enter into force only if no objection has been expressed by either the European Parliament or the Council within a period of three months of notification of that act to the European Parliament and the Council or if, before the expiry of that period, the European Parliament and the Council have both informed the Commission that they will not object.
+
+
+## Context (Surrounding text where the sentence appears)
+6.   A delegated act adopted pursuant to Articles 24, 33, 37, 40 and 43 shall enter into force only if no objection has been expressed by either the European Parliament or the Council within a period of three months of notification of that act to the European Parliament and the Council or if, before the expiry of that period, the European Parliament and the Council have both informed the Commission that they will not object. That period shall be extended by three months at the initiative of the European Parliament or of the Council.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Constitutive statement",
+   "justification": "The statement establishes the conditions under which a delegated act enters into force, defining the circumstances that must occur for the act to become effective. It does not impose a duty or obligation on any entity to perform a specific action but rather sets out the rules governing the entry into force of a delegated act."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

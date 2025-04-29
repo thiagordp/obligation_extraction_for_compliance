@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    036
+Paragraph:  007
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:24:41
+In Tokens:  1352
+Out Tokens: 85
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+In the event of the restriction, suspension or withdrawal of a designation, the notifying authority shall: (a) assess the impact on the certificates issued by the notified body; (b) submit a report on its findings to the Commission and the other Member States within three months of having notified the changes to the designation; (c) require the notified body to suspend or withdraw, within a reasonable period of time determined by the authority, any certificates which were unduly issued, in order to ensure the continuing conformity of high-risk AI systems on the market; (d) inform the Commission and the Member States about certificates the suspension or withdrawal of which it has required; (e) provide the national competent authorities of the Member State in which the provider has its registered place of business with all relevant information about the certificates of which it has required the suspension or withdrawal; that authority shall take the appropriate measures, where necessary, to avoid a potential risk to health, safety or fundamental rights.
+
+
+## Context (Surrounding text where the sentence appears)
+7.   In the event of the restriction, suspension or withdrawal of a designation, the notifying authority shall: (a) assess the impact on the certificates issued by the notified body; (b) submit a report on its findings to the Commission and the other Member States within three months of having notified the changes to the designation; (c) require the notified body to suspend or withdraw, within a reasonable period of time determined by the authority, any certificates which were unduly issued, in order to ensure the continuing conformity of high-risk AI systems on the market; (d) inform the Commission and the Member States about certificates the suspension or withdrawal of which it has required; (e) provide the national competent authorities of the Member State in which the provider has its registered place of business with all relevant information about the certificates of which it has required the suspension or withdrawal; that authority shall take the appropriate measures, where necessary, to avoid a potential risk to health, safety or fundamental rights.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a series of duties on the notifying authority, including assessing the impact, submitting a report, requiring the suspension or withdrawal of certificates, informing the Commission and Member States, and providing relevant information to national competent authorities. These actions are mandated to ensure conformity and avoid potential risks, thereby regulating the authority's behavior."
+}
+```
+
+## Evaluation
+Classification: [1]
+Justification:  [1]

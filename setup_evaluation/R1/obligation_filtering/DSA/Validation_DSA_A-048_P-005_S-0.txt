@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    048
+Paragraph:  005
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1068
+Out Tokens: 66
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+If the Commission considers that a crisis protocol fails to effectively address the crisis situation, or to safeguard the exercise of fundamental rights as referred to in paragraph 4, point (e), it shall request the participants to revise the crisis protocol, including by taking additional measures.
+
+
+## Context (Surrounding text where the sentence appears)
+5.   If the Commission considers that a crisis protocol fails to effectively address the crisis situation, or to safeguard the exercise of fundamental rights as referred to in paragraph 4, point (e), it shall request the participants to revise the crisis protocol, including by taking additional measures.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Commission to perform a specific action\u2014requesting the participants to revise the crisis protocol\u2014when certain conditions are met, thus regulating the Commission's behavior by mandating this activity under specific circumstances."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

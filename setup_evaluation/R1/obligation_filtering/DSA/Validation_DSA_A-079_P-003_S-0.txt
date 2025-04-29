@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    079
+Paragraph:  003
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1002
+Out Tokens: 54
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Commission shall base its decisions only on objections on which the parties concerned have been able to comment.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   The Commission shall base its decisions only on objections on which the parties concerned have been able to comment.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Commission to base its decisions only on specific objections, regulating the Commission's behavior by mandating this constraint on its decision-making process."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

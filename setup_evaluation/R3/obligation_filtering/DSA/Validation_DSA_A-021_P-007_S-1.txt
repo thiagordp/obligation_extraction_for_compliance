@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    021
+Paragraph:  007
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1102
+Out Tokens: 72
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Before revoking that certification, the Digital Services Coordinator shall afford that body an opportunity to react to the findings of its investigation and its intention to revoke the out-of-court dispute settlement body’s certification.
+
+
+## Context (Surrounding text where the sentence appears)
+7.   A Digital Services Coordinator that has certified an out-of-court dispute settlement body shall revoke that certification if it determines, following an investigation either on its own initiative or on the basis of the information received by third parties, that the out-of-court dispute settlement body no longer meets the conditions set out in paragraph 3. Before revoking that certification, the Digital Services Coordinator shall afford that body an opportunity to react to the findings of its investigation and its intention to revoke the out-of-court dispute settlement body’s certification.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Digital Services Coordinator to perform a specific action\u2014affording the out-of-court dispute settlement body an opportunity to react\u2014before revoking the certification. It regulates the Coordinator's behavior by mandating this step in the process."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

@@ -16,24 +16,16 @@ from seaborn.algorithms import bootstrap
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
-
 class ObligationFrequencyPlot:
     """Process and visualize the frequency of obligation filtering classifications with confidence intervals."""
 
     def __init__(self, filename: str, confidence: float = 0.95):
-        """
-        Initialize the class with the given JSON file.
-
-        :param filename: Path to the JSON file.
-        :param confidence: Confidence level for intervals (default is 95%).
-        """
         self.filename = filename
         self.confidence = confidence
         self.data = None
         self.stats = {}
 
     def load_data(self) -> None:
-        """Load obligation classifications from the JSON file into a Pandas DataFrame."""
         try:
             with open(self.filename, "r", encoding="utf-8") as file:
                 raw_data = json.load(file)
@@ -48,7 +40,6 @@ class ObligationFrequencyPlot:
             if not classifications:
                 raise ValueError("No classifications found in the JSON file.")
 
-            # Store as Pandas DataFrame
             self.data = pd.DataFrame(classifications, columns=["classification"])
 
         except (json.JSONDecodeError, FileNotFoundError) as e:
@@ -56,68 +47,72 @@ class ObligationFrequencyPlot:
             raise
 
     def compute_frequencies(self) -> None:
-        """Compute frequency of each classification and calculate confidence intervals."""
         if self.data is None:
             raise ValueError("No data loaded. Run load_data() first.")
 
-        freq_table = self.data["classification"].value_counts(normalize=True)
+        freq_table = self.data["classification"].value_counts()
         total = len(self.data)
 
-        # Compute confidence intervals using normal approximation
-        ci_width = (1.96 if self.confidence == 0.95 else 2.58) * np.sqrt((freq_table * (1 - freq_table)) / total)
+        ci_width = (1.96 if self.confidence == 0.95 else 2.58) * np.sqrt((freq_table / total) * (1 - (freq_table / total)) * total)
 
         self.stats = pd.DataFrame({
             "Frequency": freq_table,
-            "Lower_CI": (freq_table - ci_width).clip(lower=0),  # No negative values
-            "Upper_CI": (freq_table + ci_width).clip(upper=1)  # No values above 1
-        }).reset_index().rename(columns={"index": "Classification"})
+            "Lower_CI": (freq_table - ci_width).clip(lower=0),
+            "Upper_CI": (freq_table + ci_width)
+        }).reset_index().rename(columns={"index": "classification"})
 
     def get_statistics(self) -> pd.DataFrame:
-        """Return computed statistics as a DataFrame."""
-        if len(self.stats.keys()) > 0:
+        if self.stats is None or self.stats.empty:
             raise ValueError("Data not processed. Run compute_frequencies() first.")
         return self.stats
 
     def plot(self, save_path: Optional[str] = None) -> None:
-        """
-        Generate a bar chart of classification frequencies with confidence intervals.
-
-        :param save_path: (Optional) Path to save the plot as an image.
-        """
         if self.stats is None or self.stats.empty:
             raise ValueError("Data not processed. Run compute_frequencies() first.")
 
         sns.set(style="whitegrid")
-        plt.figure(figsize=(10, 6))
+        plt.figure(figsize=(12, 6))
 
-        # Plot bars with confidence intervals
-        print(self.stats)
-        plt.bar(self.stats["classification"], self.stats["Frequency"],
-                yerr=[self.stats["Frequency"] - self.stats["Lower_CI"],
-                      self.stats["Upper_CI"] - self.stats["Frequency"]],
-                capsize=5, color="skyblue", alpha=0.8)
+        # Prepare modified labels with newlines
+        self.stats["formatted_label"] = self.stats["classification"].apply(lambda x: "\n".join(x.split()))
 
-        plt.xlabel("Obligation Filtering Classification")
-        plt.ylabel("Frequency")
-        plt.title(f"Frequency of Obligation Filtering Classifications ({int(self.confidence * 100)}% CI)")
-        plt.xticks(rotation=45, ha="right")
+        bars = plt.bar(self.stats["formatted_label"], self.stats["Frequency"],
+                    yerr=[self.stats["Frequency"] - self.stats["Lower_CI"],
+                            self.stats["Upper_CI"] - self.stats["Frequency"]],
+                    capsize=10, color="grey", alpha=0.8)
+
+        #plt.xlabel("Obligation Filtering Classification", fontsize=14)
+        plt.ylabel("Frequency", fontsize=16)
+        plt.ylim(0, 700)  # Y-axis fixed range from 0 to 700
+        
+        plt.xticks(rotation=0, ha="center", fontsize=14)
+        plt.yticks(fontsize=14)
+
         plt.tight_layout()
+
+        # Add labels to each bar
+        for bar, freq, lower_ci, upper_ci in zip(bars, self.stats["Frequency"], self.stats["Lower_CI"], self.stats["Upper_CI"]):
+            ci_half_width = (upper_ci - lower_ci) / 2
+            label = f"{int(freq)} ± {ci_half_width:.0f}"
+            height = bar.get_height()
+            plt.text(bar.get_x() + bar.get_width() / 2, height + max(self.stats["Frequency"]) * 0.04,
+                    label, ha='center', va='bottom', fontsize=10)
 
         if save_path:
             plt.savefig(save_path, dpi=300)
             logging.info(f"Plot saved to {save_path}")
 
-        plt.show()
+        #plt.show()
+
+
+
+
 
     def run(self, save_path: Optional[str] = None) -> None:
-        """
-        Execute the full workflow: Load data, compute statistics, and plot.
-
-        :param save_path: (Optional) Path to save the plot.
-        """
         self.load_data()
         self.compute_frequencies()
         self.plot(save_path)
+
 
 
 # Download required NLTK data if not available
@@ -254,7 +249,7 @@ class ObligationAnalysisVisualizer2:
                                 continue
                             records.append(
                                 {
-                                    "Classification": classification,
+                                    "classification": classification,
                                     "Element": key,
                                     "Extraction Method": element.get("extraction_method", "Unknown"),
                                 }

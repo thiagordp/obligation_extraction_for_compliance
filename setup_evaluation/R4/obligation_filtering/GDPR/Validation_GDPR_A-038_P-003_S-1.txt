@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    038
+Paragraph:  003
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:59:16
+In Tokens:  1046
+Out Tokens: 55
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+He or she shall not be dismissed or penalised by the controller or the processor for performing his tasks.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   The controller and processor shall ensure that the data protection officer does not receive any instructions regarding the exercise of those tasks. He or she shall not be dismissed or penalised by the controller or the processor for performing his tasks. The data protection officer shall directly report to the highest management level of the controller or the processor.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic prohibition",
+   "justification": "This statement imposes a prohibition on the controller or the processor, specifically preventing them from dismissing or penalising the data protection officer for performing their tasks, thereby regulating their behavior."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

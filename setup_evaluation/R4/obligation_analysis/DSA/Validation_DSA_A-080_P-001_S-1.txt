@@ -1,0 +1,117 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    080
+Paragraph:  001
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5699
+Out Tokens: 243
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Commission shall publish the decisions it adopts pursuant to Article 70(1), Article 71(1) and Articles 73 to 76.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   The Commission shall publish the decisions it adopts pursuant to Article 70(1), Article 71(1) and Articles 73 to 76. Such publication shall state the names of the parties and the main content of the decision, including any penalties imposed.
+2.   The publication shall have regard to the rights and legitimate interests of the provider of the very large online platform or of the very large online search engine concerned, any other person referred to in Article 67(1) and any third parties in the protection of their confidential information.
+
+## Citations to other paragraphs, sections, if any
+Article 70 Paragraph 1
+1.   In the context of proceedings which may lead to the adoption of a decision of non-compliance pursuant to Article 73(1), where there is an urgency due to the risk of serious damage for the recipients of the service, the Commission may, by decision, order interim measures against the provider of the very large online platform or of the very large online search engine concerned on the basis of a prima facie finding of an infringement.
+
+
+Article 70 Paragraph 2
+2.   A decision under paragraph 1 shall apply for a specified period of time and may be renewed in so far this is necessary and appropriate.
+
+
+Article 71 Paragraph 1
+1.   If, during proceedings under this Section, the provider of the very large online platform or of the very large online search engine concerned offers commitments to ensure compliance with the relevant provisions of this Regulation, the Commission may by decision make those commitments binding on the provider of the very large online platform or of the very large online search engine concerned and declare that there are no further grounds for action.
+
+
+Article 71 Paragraph 2
+2.   The Commission may, upon request or on its own initiative, reopen the proceedings: (a) where there has been a material change in any of the facts on which the decision was based; (b) where the provider of the very large online platform or of the very large online search engine concerned acts contrary to its commitments; or (c) where the decision was based on incomplete, incorrect or misleading information provided by the provider of the very large online platform or of the very large online search engine concerned or other person referred to in Article 67(1).
+
+
+Article 71 Paragraph 3
+3.   Where the Commission considers that the commitments offered by the provider of the very large online platform or of the very large online search engine concerned are unable to ensure effective compliance with the relevant provisions of this Regulation, it shall reject those commitments in a reasoned decision when concluding the proceedings.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Commission"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall publish",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the decisions it adopts pursuant to Article 70(1), Article 71(1) and Articles 73 to 76"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "Such publication shall state the names of the parties and the main content of the decision, including any penalties imposed"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "The public, the parties involved, and any other stakeholders"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall publish')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

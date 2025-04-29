@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    092
+Paragraph:  003
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:59:16
+In Tokens:  1076
+Out Tokens: 61
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+A decision of revocation shall put an end to the delegation of power specified in that decision.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   The delegation of power referred to in Article 12(8) and Article 43(8) may be revoked at any time by the European Parliament or by the Council. A decision of revocation shall put an end to the delegation of power specified in that decision. It shall take effect the day following that of its publication in the Official Journal of the European Union or at a later date specified therein. It shall not affect the validity of any delegated acts already in force.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Constitutive statement",
+   "justification": "The statement establishes the legal effect of a decision of revocation, bringing into effect a new state of affairs by putting an end to the delegation of power, thus defining the consequence of such a decision."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

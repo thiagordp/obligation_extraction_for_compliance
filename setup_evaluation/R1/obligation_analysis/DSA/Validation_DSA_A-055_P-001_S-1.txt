@@ -1,0 +1,100 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    055
+Paragraph:  001
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5366
+Out Tokens: 223
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Digital Services Coordinators shall draw up annual reports on their activities under this Regulation, including the number of complaints received pursuant to Article 53 and an overview of their follow-up.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   Digital Services Coordinators shall draw up annual reports on their activities under this Regulation, including the number of complaints received pursuant to Article 53 and an overview of their follow-up. The Digital Services Coordinators shall make the annual reports available to the public in a machine-readable format, subject to the applicable rules on the confidentiality of information pursuant to Article 84, and shall communicate them to the Commission and to the Board.
+2.   The annual report shall also include the following information: (a) the number and subject matter of orders to act against illegal content and orders to provide information issued in accordance with Articles 9 and 10 by any national judicial or administrative authority of the Member State of the Digital Services Coordinator concerned; (b) the effects given to those orders, as communicated to the Digital Services Coordinator pursuant to Articles 9 and 10.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "Digital Services Coordinators"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall draw up",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "annual reports on their activities under this Regulation"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "including the number of complaints received pursuant to Article 53 and an overview of their follow-up"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "the public, the Commission and the Board"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall draw up')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

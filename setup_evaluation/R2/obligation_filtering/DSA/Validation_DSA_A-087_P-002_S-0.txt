@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    087
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1109
+Out Tokens: 56
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The delegation of power referred to in Articles 24, 33, 37, 40 and 43 shall be conferred on the Commission for five years starting from 16 November 2022.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   The delegation of power referred to in Articles 24, 33, 37, 40 and 43 shall be conferred on the Commission for five years starting from 16 November 2022. The Commission shall draw up a report in respect of the delegation of power not later than nine months before the end of the five-year period. The delegation of power shall be tacitly extended for periods of an identical duration, unless the European Parliament or the Council opposes such extension not later than three months before the end of each period.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Constitutive statement",
+   "justification": "The statement establishes a fact with legal effect, specifically the duration and recipient of the delegation of power, thereby bringing into effect a new state of affairs regarding the Commission's authority."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

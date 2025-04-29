@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    062
+Paragraph:  003
+Sentence:   4
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1062
+Out Tokens: 66
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+When adopting a recommendation to the Commission referred to in Article 36(1), first subparagraph, the Board shall vote within 48 hours after the request of the Chair of the Board.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   Each Member State shall have one vote. The Commission shall not have voting rights. The Board shall adopt its acts by simple majority. When adopting a recommendation to the Commission referred to in Article 36(1), first subparagraph, the Board shall vote within 48 hours after the request of the Chair of the Board.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Board to perform a specific action\u2014voting within 48 hours after the request of the Chair of the Board. It regulates the Board\u2019s behavior by mandating this activity under specific conditions."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

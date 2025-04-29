@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    075
+Paragraph:  003
+Sentence:   5
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1235
+Out Tokens: 87
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+To that end, the provider of a very large online platform or of a very large online search engine concerned shall communicate the audit report to the Commission without undue delay after it becomes available, and shall keep the Commission up to date on steps taken to implement the action plan.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   Within one month following receipt of the action plan, the Board shall communicate its opinion on the action plan to the Commission. Within one month following receipt of that opinion, the Commission shall decide whether the measures set out in the action plan are sufficient to terminate or remedy the infringement, and shall set a reasonable period for its implementation. The possible commitment to adhere to relevant codes of conduct shall be taken into account in that decision. The Commission shall subsequently monitor the implementation of the action plan. To that end, the provider of a very large online platform or of a very large online search engine concerned shall communicate the audit report to the Commission without undue delay after it becomes available, and shall keep the Commission up to date on steps taken to implement the action plan. The Commission may, where necessary for such monitoring, require the provider of a very large online platform or of a very large online search engine concerned to provide additional information within a reasonable period set by the Commission. The Commission shall keep the Board and the Digital Services Coordinators informed about the implementation of the action plan, and about its monitoring thereof.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the provider of a very large online platform or of a very large online search engine to perform two specific actions: communicating the audit report to the Commission without undue delay and keeping the Commission up to date on steps taken to implement the action plan. It regulates the provider's behavior by mandating these activities."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

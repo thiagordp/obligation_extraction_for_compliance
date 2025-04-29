@@ -1,0 +1,161 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    021
+Paragraph:  005
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5896
+Out Tokens: 490
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+If the out-of-court dispute settlement body decides the dispute in favour of the recipient of the service, including the individual or entity that has submitted a notice, the provider of the online platform shall bear all the fees charged by the out-of-court dispute settlement body, and shall reimburse that recipient, including the individual or entity, for any other reasonable expenses that it has paid in relation to the dispute settlement.
+
+
+## Context (Surrounding text where the sentence appears)
+4.   Certified out-of-court dispute settlement bodies shall report to the Digital Services Coordinator that certified them, on an annual basis, on their functioning, specifying at least the number of disputes they received, the information about the outcomes of those disputes, the average time taken to resolve them and any shortcomings or difficulties encountered. They shall provide additional information at the request of that Digital Services Coordinator. Digital Services Coordinators shall, every two years, draw up a report on the functioning of the out-of-court dispute settlement bodies that they certified. That report shall in particular: (a) list the number of disputes that each certified out-of-court dispute settlement body has received annually; (b) indicate the outcomes of the procedures brought before those bodies and the average time taken to resolve the disputes; (c) identify and explain any systematic or sectoral shortcomings or difficulties encountered in relation to the functioning of those bodies; (d) identify best practices concerning that functioning; (e) make recommendations as to how to improve that functioning, where appropriate. Certified out-of-court dispute settlement bodies shall make their decisions available to the parties within a reasonable period of time and no later than 90 calendar days after the receipt of the complaint. In the case of highly complex disputes, the certified out-of-court dispute settlement body may, at its own discretion, extend the 90 calendar day period for an additional period that shall not exceed 90 days, resulting in a maximum total duration of 180 days.
+5.   If the out-of-court dispute settlement body decides the dispute in favour of the recipient of the service, including the individual or entity that has submitted a notice, the provider of the online platform shall bear all the fees charged by the out-of-court dispute settlement body, and shall reimburse that recipient, including the individual or entity, for any other reasonable expenses that it has paid in relation to the dispute settlement. If the out-of-court dispute settlement body decides the dispute in favour of the provider of the online platform, the recipient of the service, including the individual or entity, shall not be required to reimburse any fees or other expenses that the provider of the online platform paid or is to pay in relation to the dispute settlement, unless the out-of-court dispute settlement body finds that that recipient manifestly acted in bad faith. The fees charged by the out-of-court dispute settlement body to the providers of online platforms for the dispute settlement shall be reasonable and shall in any event not exceed the costs incurred by the body. For recipients of the service, the dispute settlement shall be available free of charge or at a nominal fee. Certified out-of-court dispute settlement bodies shall make the fees, or the mechanisms used to determine the fees, known to the recipient of the service, including to the individuals or entities that have submitted a notice, and to the provider of the online platform concerned, before engaging in the dispute settlement.
+6.   Member States may establish out-of-court dispute settlement bodies for the purposes of paragraph 1 or support the activities of some or all out-of-court dispute settlement bodies that they have certified in accordance with paragraph 3. Member States shall ensure that any of their activities undertaken under the first subparagraph do not affect the ability of their Digital Services Coordinators to certify the bodies concerned in accordance with paragraph 3.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "the provider of the online platform"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall bear",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "all the fees charged by the out-of-court dispute settlement body"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "If the out-of-court dispute settlement body decides the dispute in favour of the recipient of the service, including the individual or entity that has submitted a notice"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "the recipient of the service, including the individual or entity that has submitted a notice"
+         }
+      ]
+   },
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "the provider of the online platform"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall reimburse",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "any other reasonable expenses that it has paid in relation to the dispute settlement"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "If the out-of-court dispute settlement body decides the dispute in favour of the recipient of the service, including the individual or entity that has submitted a notice"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "the recipient of the service, including the individual or entity that has submitted a notice"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall bear')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+### Obligation 2 (Predicate: 'shall reimburse')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

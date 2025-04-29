@@ -1,0 +1,110 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    051
+Paragraph:  003
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  6683
+Out Tokens: 219
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Digital Services Coordinator shall, except where it acts upon the Commission’s request referred to in Article 82, prior to submitting the request referred to in the first subparagraph, point (b), of this paragraph invite interested parties to submit written observations within a period that shall not be less than two weeks, describing the measures that it intends to request and identifying the intended addressee or addressees thereof.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   Where needed for carrying out their tasks under this Regulation, Digital Services Coordinators shall have the following enforcement powers, in respect of providers of intermediary services falling within the competence of their Member State: (a) the power to accept the commitments offered by those providers in relation to their compliance with this Regulation and to make those commitments binding; (b) the power to order the cessation of infringements and, where appropriate, to impose remedies proportionate to the infringement and necessary to bring the infringement effectively to an end, or to request a judicial authority in their Member State to do so; (c) the power to impose fines, or to request a judicial authority in their Member State to do so, in accordance with Article 52 for failure to comply with this Regulation, including with any of the investigative orders issued pursuant to paragraph 1 of this Article; (d) the power to impose a periodic penalty payment, or to request a judicial authority in their Member State to do so, in accordance with Article 52 to ensure that an infringement is terminated in compliance with an order issued pursuant to point (b) of this subparagraph or for failure to comply with any of the investigative orders issued pursuant to paragraph 1 of this Article; (e) the power to adopt interim measures or to request the competent national judicial authority in their Member State to do so, to avoid the risk of serious harm. As regards the first subparagraph, points (c) and (d), Digital Services Coordinators shall also have the enforcement powers set out in those points in respect of the other persons referred to in paragraph 1 for failure to comply with any of the orders issued to them pursuant to that paragraph. They shall only exercise those enforcement powers after providing those other persons in good time with all relevant information relating to such orders, including the applicable period, the fines or periodic payments that may be imposed for failure to comply and the possibilities for redress.
+3.   Where needed for carrying out their tasks under this Regulation, Digital Services Coordinators shall, in respect of providers of intermediary services falling within the competence of their Member State, where all other powers pursuant to this Article to bring about the cessation of an infringement have been exhausted and the infringement has not been remedied or is continuing and is causing serious harm which cannot be avoided through the exercise of other powers available under Union or national law, also have the power to take the following measures: (a) to require the management body of those providers, without undue delay, to examine the situation, adopt and submit an action plan setting out the necessary measures to terminate the infringement, ensure that the provider takes those measures, and report on the measures taken; (b) where the Digital Services Coordinator considers that a provider of intermediary services has not sufficiently complied with the requirements referred to in point (a), that the infringement has not been remedied or is continuing and is causing serious harm, and that that infringement entails a criminal offence involving a threat to the life or safety of persons, to request that the competent judicial authority of its Member State order the temporary restriction of access of recipients to the service concerned by the infringement or, only where that is not technically feasible, to the online interface of the provider of intermediary services on which the infringement takes place. The Digital Services Coordinator shall, except where it acts upon the Commission’s request referred to in Article 82, prior to submitting the request referred to in the first subparagraph, point (b), of this paragraph invite interested parties to submit written observations within a period that shall not be less than two weeks, describing the measures that it intends to request and identifying the intended addressee or addressees thereof. The provider of intermediary services, the intended addressee or addressees and any other third party demonstrating a legitimate interest shall be entitled to participate in the proceedings before the competent judicial authority. Any measure ordered shall be proportionate to the nature, gravity, recurrence and duration of the infringement, without unduly restricting access to lawful information by recipients of the service concerned. The restriction of access shall be for a period of four weeks, subject to the possibility for the competent judicial authority, in its order, to allow the Digital Services Coordinator to extend that period for further periods of the same lengths, subject to a maximum number of extensions set by that judicial authority. The Digital Services Coordinator shall only extend the period where, having regard to the rights and interests of all parties affected by that restriction and all relevant circumstances, including any information that the provider of intermediary services, the addressee or addressees and any other third party that demonstrated a legitimate interest may provide to it, it considers that both of the following conditions have been met: (a) the provider of intermediary services has failed to take the necessary measures to terminate the infringement; (b) the temporary restriction does not unduly restrict access to lawful information by recipients of the service, having regard to the number of recipients affected and whether any adequate and readily accessible alternatives exist. Where the Digital Services Coordinator considers that the conditions set out in the third subparagraph, points (a) and (b), have been met but it cannot further extend the period pursuant to the third subparagraph, it shall submit a new request to the competent judicial authority, as referred to in the first subparagraph, point (b).
+4.   The powers listed in paragraphs 1, 2 and 3 shall be without prejudice to Section 3.
+
+## Citations to other paragraphs, sections, if any
+Article 82 Paragraph 1
+1.   Where all powers pursuant to this Section to bring about the cessation of an infringement of this Regulation have been exhausted, the infringement persists and causes serious harm which cannot be avoided through the exercise of other powers available under Union or national law, the Commission may request the Digital Services Coordinator of establishment of the provider of the very large online platform or of the very large online search engine concerned to act pursuant to Article 51(3). Prior to making such request to the Digital Services Coordinator, the Commission shall invite interested parties to submit written observations within a period that shall not be less than 14 working days, describing the measures it intends to request and identifying the intended addressee or addressees thereof.
+
+
+Article 82 Paragraph 2
+2.   Where the coherent application of this Regulation so requires, the Commission, acting on its own initiative, may submit written observations to the competent judicial authority referred to Article 51(3). With the permission of the judicial authority in question, it may also make oral observations. For the purpose of the preparation of its observations only, the Commission may request that judicial authority to transmit or ensure the transmission to it of any documents necessary for the assessment of the case.
+
+
+Article 82 Paragraph 3
+3.   When a national court rules on a matter which is already the subject matter of a decision adopted by the Commission under this Regulation, that national court shall not take any decision which runs counter to that Commission decision. National courts shall also avoid taking decisions which could conflict with a decision contemplated by the Commission in proceedings it has initiated under this Regulation. To that effect, a national court may assess whether it is necessary to stay its proceedings. This is without prejudice to Article 267 TFEU.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Digital Services Coordinator"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall invite",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "interested parties"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "to submit written observations within a period that shall not be less than two weeks"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "except where it acts upon the Commission\u2019s request referred to in Article 82"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall invite')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

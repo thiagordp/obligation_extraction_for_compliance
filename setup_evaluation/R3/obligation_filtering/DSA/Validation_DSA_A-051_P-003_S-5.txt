@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    051
+Paragraph:  003
+Sentence:   6
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1772
+Out Tokens: 63
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Digital Services Coordinator shall only extend the period where, having regard to the rights and interests of all parties affected by that restriction and all relevant circumstances, including any information that the provider of intermediary services, the addressee or addressees and any other third party that demonstrated a legitimate interest may provide to it, it considers that both of the following conditions have been met: (a) the provider of intermediary services has failed to take the necessary measures to terminate the infringement; (b) the temporary restriction does not unduly restrict access to lawful information by recipients of the service, having regard to the number of recipients affected and whether any adequate and readily accessible alternatives exist.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   Where needed for carrying out their tasks under this Regulation, Digital Services Coordinators shall, in respect of providers of intermediary services falling within the competence of their Member State, where all other powers pursuant to this Article to bring about the cessation of an infringement have been exhausted and the infringement has not been remedied or is continuing and is causing serious harm which cannot be avoided through the exercise of other powers available under Union or national law, also have the power to take the following measures: (a) to require the management body of those providers, without undue delay, to examine the situation, adopt and submit an action plan setting out the necessary measures to terminate the infringement, ensure that the provider takes those measures, and report on the measures taken; (b) where the Digital Services Coordinator considers that a provider of intermediary services has not sufficiently complied with the requirements referred to in point (a), that the infringement has not been remedied or is continuing and is causing serious harm, and that that infringement entails a criminal offence involving a threat to the life or safety of persons, to request that the competent judicial authority of its Member State order the temporary restriction of access of recipients to the service concerned by the infringement or, only where that is not technically feasible, to the online interface of the provider of intermediary services on which the infringement takes place. The Digital Services Coordinator shall, except where it acts upon the Commission’s request referred to in Article 82, prior to submitting the request referred to in the first subparagraph, point (b), of this paragraph invite interested parties to submit written observations within a period that shall not be less than two weeks, describing the measures that it intends to request and identifying the intended addressee or addressees thereof. The provider of intermediary services, the intended addressee or addressees and any other third party demonstrating a legitimate interest shall be entitled to participate in the proceedings before the competent judicial authority. Any measure ordered shall be proportionate to the nature, gravity, recurrence and duration of the infringement, without unduly restricting access to lawful information by recipients of the service concerned. The restriction of access shall be for a period of four weeks, subject to the possibility for the competent judicial authority, in its order, to allow the Digital Services Coordinator to extend that period for further periods of the same lengths, subject to a maximum number of extensions set by that judicial authority. The Digital Services Coordinator shall only extend the period where, having regard to the rights and interests of all parties affected by that restriction and all relevant circumstances, including any information that the provider of intermediary services, the addressee or addressees and any other third party that demonstrated a legitimate interest may provide to it, it considers that both of the following conditions have been met: (a) the provider of intermediary services has failed to take the necessary measures to terminate the infringement; (b) the temporary restriction does not unduly restrict access to lawful information by recipients of the service, having regard to the number of recipients affected and whether any adequate and readily accessible alternatives exist. Where the Digital Services Coordinator considers that the conditions set out in the third subparagraph, points (a) and (b), have been met but it cannot further extend the period pursuant to the third subparagraph, it shall submit a new request to the competent judicial authority, as referred to in the first subparagraph, point (b).
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Digital Services Coordinator to extend the period of restriction only under specific conditions, regulating its behavior by mandating the consideration of certain factors and the meeting of specific criteria before taking action."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

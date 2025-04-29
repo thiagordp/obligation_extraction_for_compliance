@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    049
+Paragraph:  002
+Sentence:   5
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1219
+Out Tokens: 78
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Where a Member State designates one or more competent authorities in addition to the Digital Services Coordinator, it shall ensure that the respective tasks of those authorities and of the Digital Services Coordinator are clearly defined and that they cooperate closely and effectively when performing their tasks.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   Member States shall designate one of the competent authorities as their Digital Services Coordinator. The Digital Services Coordinator shall be responsible for all matters relating to supervision and enforcement of this Regulation in that Member State, unless the Member State concerned has assigned certain specific tasks or sectors to other competent authorities. The Digital Services Coordinator shall in any event be responsible for ensuring coordination at national level in respect of those matters and for contributing to the effective and consistent supervision and enforcement of this Regulation throughout the Union. For that purpose, Digital Services Coordinators shall cooperate with each other, other national competent authorities, the Board and the Commission, without prejudice to the possibility for Member States to provide for cooperation mechanisms and regular exchanges of views between the Digital Services Coordinator and other national authorities where relevant for the performance of their respective tasks. Where a Member State designates one or more competent authorities in addition to the Digital Services Coordinator, it shall ensure that the respective tasks of those authorities and of the Digital Services Coordinator are clearly defined and that they cooperate closely and effectively when performing their tasks.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Member State to ensure that the tasks of the additional competent authorities and the Digital Services Coordinator are clearly defined and that they cooperate closely and effectively. It regulates the Member State's behavior by mandating specific actions to be taken when designating additional competent authorities."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

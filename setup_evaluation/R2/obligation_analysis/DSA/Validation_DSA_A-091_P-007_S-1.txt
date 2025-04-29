@@ -1,0 +1,189 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    091
+Paragraph:  007
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  6099
+Out Tokens: 449
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+By 18 February 2027, the Commission, after consulting the Board, shall carry out an assessment of the functioning of the Board and of the application of Article 43, and shall report it to the European Parliament, the Council and the European Economic and Social Committee, taking into account the first years of application of the Regulation.
+
+
+## Context (Surrounding text where the sentence appears)
+6.   In carrying out the evaluations referred to in paragraph 2, the Commission shall take into account the positions and findings of the European Parliament, the Council, and other relevant bodies or sources, and shall pay specific attention to small and medium-sized enterprises and the position of new competitors.
+7.   By 18 February 2027, the Commission, after consulting the Board, shall carry out an assessment of the functioning of the Board and of the application of Article 43, and shall report it to the European Parliament, the Council and the European Economic and Social Committee, taking into account the first years of application of the Regulation. On the basis of the findings and taking utmost account of the opinion of the Board, that report shall, where appropriate, be accompanied by a proposal for amendment of this Regulation with regard to the structure of the Board.
+
+## Citations to other paragraphs, sections, if any
+Article 43 Paragraph 1
+1.   The Commission shall charge providers of very large online platforms and of very large online search engines an annual supervisory fee upon their designation pursuant to Article 33.
+
+
+Article 43 Paragraph 2
+2.   The overall amount of the annual supervisory fees shall cover the estimated costs that the Commission incurs in relation to its supervisory tasks under this Regulation, in particular costs related to the designation pursuant to Article 33, to the set-up, maintenance and operation of the database pursuant to Article 24(5) and to the information sharing system pursuant to Article 85, to referrals pursuant to Article 59, to supporting the Board pursuant to Article 62 and to the supervisory tasks pursuant to Article 56 and Section 4 of Chapter IV.
+
+
+Article 43 Paragraph 3
+3.   The providers of very large online platforms and of very large online search engines shall be charged annually a supervisory fee for each service for which they have been designated pursuant to Article 33. The Commission shall adopt implementing acts establishing the amount of the annual supervisory fee in respect of each provider of very large online platform or of very large online search engine. When adopting those implementing acts, the Commission shall apply the methodology laid down in the delegated act referred to in paragraph 4 of this Article and shall respect the principles set out in paragraph 5 of this Article. Those implementing acts shall be adopted in accordance with the advisory procedure referred to in Article 88.
+
+
+Article 43 Paragraph 4
+4.   The Commission shall adopt delegated acts, in accordance with Article 87, laying down the detailed methodology and procedures for: (a) the determination of the estimated costs referred to in paragraph 2; (b) the determination of the individual annual supervisory fees referred to in paragraph 5, points (b) and (c); (c) the determination of the maximum overall limit defined in paragraph 5, point (c); and (d) the detailed arrangements necessary to make payments. When adopting those delegated acts, the Commission shall respect the principles set out in paragraph 5 of this Article.
+
+
+Article 43 Paragraph 5
+5.   The implementing act referred to in paragraph 3 and the delegated act referred to in paragraph 4 shall respect the following principles: (a) the estimation of the overall amount of the annual supervisory fee takes into account the costs incurred in the previous year; (b) the annual supervisory fee is proportionate to the number of average monthly active recipients in the Union of each very large online platform or each very large online search engine designated pursuant to Article 33; (c) the overall amount of the annual supervisory fee charged on a given provider of very large online platform or very large search engine does not, in any case, exceed 0,05 % of its worldwide annual net income in the preceding financial year.
+
+
+Article 43 Paragraph 6
+6.   The individual annual supervisory fees charged pursuant to paragraph 1 of this Article shall constitute external assigned revenue in accordance with Article 21(5) of Regulation (EU, Euratom) 2018/1046 of the European Parliament and of the Council (41).
+
+
+Article 43 Paragraph 7
+7.   The Commission shall report annually to the European Parliament and to the Council on the overall amount of the costs incurred for the fulfilment of the tasks under this Regulation and the total amount of the individual annual supervisory fees charged in the preceding year.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Commission"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall carry out an assessment",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "of the functioning of the Board and of the application of Article 43"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "after consulting the Board"
+         },
+         {
+            "extraction_method": "Stated",
+            "value": "taking into account the first years of application of the Regulation"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "By 18 February 2027"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "The European Parliament, the Council and the European Economic and Social Committee"
+         }
+      ]
+   },
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Commission"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall report",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the assessment"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "The European Parliament, the Council and the European Economic and Social Committee"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall carry out an assessment')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+### Obligation 2 (Predicate: 'shall report')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

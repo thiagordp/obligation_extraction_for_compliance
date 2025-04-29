@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    041
+Paragraph:  007
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1050
+Out Tokens: 61
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+It shall be actively involved in the decisions related to risk management, and shall ensure that adequate resources are allocated to the management of the risks identified in accordance with Article 34.
+
+
+## Context (Surrounding text where the sentence appears)
+7.   The management body shall devote sufficient time to the consideration of the measures related to risk management. It shall be actively involved in the decisions related to risk management, and shall ensure that adequate resources are allocated to the management of the risks identified in accordance with Article 34.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the management body to be actively involved in decisions related to risk management and to ensure adequate resources are allocated for risk management, thus regulating its behavior by mandating specific actions."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    065
+Paragraph:  003
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1260
+Out Tokens: 61
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+A request pursuant to paragraph 2 shall be duly reasoned and at least indicate: (a) the point of contact of the provider of the very large online platform or of the very large online search engine concerned as provided for in Article 11; (b) a description of the relevant facts, the provisions of this Regulation concerned and the reasons why the Digital Services Coordinator that sent the request suspects that the provider of the very large online platforms or of the very large online search engine concerned infringed this Regulation, including a description of the facts that show that the suspected infringement is of a systemic nature; (c) any other information that the Digital Services Coordinator that sent the request considers relevant, including, where appropriate, information gathered on its own initiative.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   A request pursuant to paragraph 2 shall be duly reasoned and at least indicate: (a) the point of contact of the provider of the very large online platform or of the very large online search engine concerned as provided for in Article 11; (b) a description of the relevant facts, the provisions of this Regulation concerned and the reasons why the Digital Services Coordinator that sent the request suspects that the provider of the very large online platforms or of the very large online search engine concerned infringed this Regulation, including a description of the facts that show that the suspected infringement is of a systemic nature; (c) any other information that the Digital Services Coordinator that sent the request considers relevant, including, where appropriate, information gathered on its own initiative.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the request pursuant to paragraph 2 to be duly reasoned and to include specific information, regulating the behavior of the Digital Services Coordinator by mandating the content of the request."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

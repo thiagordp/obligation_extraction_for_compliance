@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    030
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1276
+Out Tokens: 77
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Upon receiving the information referred to in paragraph 1 and prior to allowing the trader concerned to use its services, the provider of the online platform allowing consumers to conclude distance contracts with traders shall, through the use of any freely accessible official online database or online interface made available by a Member State or the Union or through requests to the trader to provide supporting documents from reliable sources, make best efforts to assess whether the information referred to in paragraph 1, points (a) to (e), is reliable and complete.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   Upon receiving the information referred to in paragraph 1 and prior to allowing the trader concerned to use its services, the provider of the online platform allowing consumers to conclude distance contracts with traders shall, through the use of any freely accessible official online database or online interface made available by a Member State or the Union or through requests to the trader to provide supporting documents from reliable sources, make best efforts to assess whether the information referred to in paragraph 1, points (a) to (e), is reliable and complete. For the purpose of this Regulation, traders shall be liable for the accuracy of the information provided. As regards traders that are already using the services of providers of online platforms allowing consumers to conclude distance contracts with traders for the purposes referred to in paragraph 1 on 17 February 2024, the providers shall make best efforts to obtain the information listed from the traders concerned within 12 months. Where the traders concerned fail to provide the information within that period, the providers shall suspend the provision of their services to those traders until they have provided all information.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the provider of the online platform to perform a specific action\u2014make best efforts to assess the reliability and completeness of the information provided by the trader. It regulates the provider's behavior by mandating this activity prior to allowing the trader to use its services."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

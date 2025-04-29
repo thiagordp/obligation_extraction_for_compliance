@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    060
+Paragraph:  004
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1146
+Out Tokens: 57
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Digital Services Coordinators of destination participating in the joint investigation shall be entitled, at the request of or after having consulted the Digital Services Coordinator of establishment, to exercise their investigative powers referred to in Article 51(1) in respect of the providers of intermediary services concerned by the alleged infringement, with regard to information and premises located within their territory.
+
+
+## Context (Surrounding text where the sentence appears)
+4.   In carrying out the joint investigation, the participating Digital Services Coordinators shall cooperate in good faith, taking into account, where applicable, the indications of the Digital Services Coordinator of establishment and the Board’s recommendation. The Digital Services Coordinators of destination participating in the joint investigation shall be entitled, at the request of or after having consulted the Digital Services Coordinator of establishment, to exercise their investigative powers referred to in Article 51(1) in respect of the providers of intermediary services concerned by the alleged infringement, with regard to information and premises located within their territory.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Entitlements",
+   "justification": "The statement empowers the Digital Services Coordinators of destination to exercise their investigative powers under specific conditions, granting them a right to take certain actions in the context of a joint investigation."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

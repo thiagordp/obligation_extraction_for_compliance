@@ -1,0 +1,101 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    092
+Paragraph:  005
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:57:56
+In Tokens:  5352
+Out Tokens: 290
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The providers of the general-purpose AI model concerned or its representative shall supply the information requested.
+
+
+## Context (Surrounding text where the sentence appears)
+4.   The request for access shall state the legal basis, the purpose and reasons of the request and set the period within which the access is to be provided, and the fines provided for in Article 101 for failure to provide access.
+5.   The providers of the general-purpose AI model concerned or its representative shall supply the information requested. In the case of legal persons, companies or firms, or where the provider has no legal personality, the persons authorised to represent them by law or by their statutes, shall provide the access requested on behalf of the provider of the general-purpose AI model concerned.
+6.   The Commission shall adopt implementing acts setting out the detailed arrangements and the conditions for the evaluations, including the detailed arrangements for involving independent experts, and the procedure for the selection thereof. Those implementing acts shall be adopted in accordance with the examination procedure referred to in Article 98(2).
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The providers of the general-purpose AI model concerned or its representative"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall supply",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the information requested"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Context",
+            "value": "In the case of legal persons, companies or firms, or where the provider has no legal personality, the persons authorised to represent them by law or by their statutes, shall provide the access requested on behalf of the provider of the general-purpose AI model concerned"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Context",
+            "value": "The request for access shall state the legal basis, the purpose and reasons of the request and set the period within which the access is to be provided, and the fines provided for in Article 101 for failure to provide access"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [1]
+
+### Obligation 1 (Predicate: 'shall supply')
+
+1. ObligationTypeClassification: [1]
+2. Addressees:
+    - Value                      [1]
+    - Extraction Method          [1]
+3. Predicates:
+    - Value                      [1]
+    - Extraction Method          [1]
+4. Objects:
+    - Value                      [1]
+    - Extraction Method          [1]
+5. Specifications:
+    - Value                      [0]
+    - Extraction Method          [0]
+6. Pre-Conditions
+    - Value                      [0]
+    - Extraction Method          [0]
+7. Beneficiaries
+    - Value                      [0]
+    - Extraction Method          [0]
+
+

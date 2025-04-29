@@ -1,0 +1,100 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    029
+Paragraph:  001
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5367
+Out Tokens: 241
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+This Section shall not apply to providers of online platforms allowing consumers to conclude distance contracts with traders that qualify as micro or small enterprises as defined in Recommendation 2003/361/EC.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   This Section shall not apply to providers of online platforms allowing consumers to conclude distance contracts with traders that qualify as micro or small enterprises as defined in Recommendation 2003/361/EC. This Section shall not apply to providers of online platforms allowing consumers to conclude distance contracts with traders that previously qualified for the status of a micro or small enterprise as defined in Recommendation 2003/361/EC during the 12 months following their loss of that status pursuant to Article 4(2) thereof, except when they are very large online platforms in accordance with Article 33.
+2.   By derogation from paragraph 1 of this Article, this Section shall apply to providers of online platforms allowing consumers to conclude distance contracts with traders that have been designated as very large online platforms in accordance with Article 33, irrespective of whether they qualify as micro or small enterprises.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Being",
+      "Addressees": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall not apply",
+         "verb": "passive"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "This Section"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "to providers of online platforms allowing consumers to conclude distance contracts with traders that qualify as micro or small enterprises as defined in Recommendation 2003/361/EC"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "Providers of online platforms and micro or small enterprises"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall not apply')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

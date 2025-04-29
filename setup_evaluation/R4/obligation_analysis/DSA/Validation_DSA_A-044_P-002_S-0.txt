@@ -1,0 +1,100 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    044
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  5517
+Out Tokens: 213
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Commission shall support the update of the standards in the light of technological developments and the behaviour of the recipients of the services in question.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   The Commission shall consult the Board, and shall support and promote the development and implementation of voluntary standards set by relevant European and international standardisation bodies, at least in respect of the following: (a) electronic submission of notices under Article 16; (b) templates, design and process standards for communicating with the recipients of the service in a user-friendly manner on restrictions resulting from terms and conditions and changes thereto; (c) electronic submission of notices by trusted flaggers under Article 22, including through application programming interfaces; (d) specific interfaces, including application programming interfaces, to facilitate compliance with the obligations set out in Articles 39 and 40; (e) auditing of very large online platforms and of very large online search engines pursuant to Article 37; (f) interoperability of the advertisement repositories referred to in Article 39(2); (g) transmission of data between advertising intermediaries in support of transparency obligations pursuant to Article 26(1), points (b), (c) and (d); (h) technical measures to enable compliance with obligations relating to advertising contained in this Regulation, including the obligations regarding prominent markings for advertisements and commercial communications referred to in Article 26; (i) choice interfaces and presentation of information on the main parameters of different types of recommender systems, in accordance with Articles 27 and 38; (j) standards for targeted measures to protect minors online.
+2.   The Commission shall support the update of the standards in the light of technological developments and the behaviour of the recipients of the services in question. The relevant information regarding the update of the standards shall be publicly available and easily accessible.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Commission"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall support",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "the update of the standards"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "in the light of technological developments and the behaviour of the recipients of the services in question"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "Recipients of the services"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall support')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

@@ -1,0 +1,102 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    030
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  6023
+Out Tokens: 286
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Upon receiving the information referred to in paragraph 1 and prior to allowing the trader concerned to use its services, the provider of the online platform allowing consumers to conclude distance contracts with traders shall, through the use of any freely accessible official online database or online interface made available by a Member State or the Union or through requests to the trader to provide supporting documents from reliable sources, make best efforts to assess whether the information referred to in paragraph 1, points (a) to (e), is reliable and complete.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   Providers of online platforms allowing consumers to conclude distance contracts with traders shall ensure that traders can only use those online platforms to promote messages on or to offer products or services to consumers located in the Union if, prior to the use of their services for those purposes, they have obtained the following information, where applicable to the trader: (a) the name, address, telephone number and email address of the trader; (b) a copy of the identification document of the trader or any other electronic identification as defined by Article 3 of Regulation (EU) No 910/2014 of the European Parliament and of the Council (40); (c) the payment account details of the trader; (d) where the trader is registered in a trade register or similar public register, the trade register in which the trader is registered and its registration number or equivalent means of identification in that register; (e) a self-certification by the trader committing to only offer products or services that comply with the applicable rules of Union law.
+2.   Upon receiving the information referred to in paragraph 1 and prior to allowing the trader concerned to use its services, the provider of the online platform allowing consumers to conclude distance contracts with traders shall, through the use of any freely accessible official online database or online interface made available by a Member State or the Union or through requests to the trader to provide supporting documents from reliable sources, make best efforts to assess whether the information referred to in paragraph 1, points (a) to (e), is reliable and complete. For the purpose of this Regulation, traders shall be liable for the accuracy of the information provided. As regards traders that are already using the services of providers of online platforms allowing consumers to conclude distance contracts with traders for the purposes referred to in paragraph 1 on 17 February 2024, the providers shall make best efforts to obtain the information listed from the traders concerned within 12 months. Where the traders concerned fail to provide the information within that period, the providers shall suspend the provision of their services to those traders until they have provided all information.
+3.   Where the provider of the online platform allowing consumers to conclude distance contracts with traders obtains sufficient indications or has reason to believe that any item of information referred to in paragraph 1 obtained from the trader concerned is inaccurate, incomplete or not up-to-date, that provider shall request that the trader remedy that situation without delay or within the period set by Union and national law. Where the trader fails to correct or complete that information, the provider of the online platform allowing consumers to conclude distance contracts with traders shall swiftly suspend the provision of its service to that trader in relation to the offering of products or services to consumers located in the Union until the request has been fully complied with.
+
+## Citations to other paragraphs, sections, if any
+Article 30 Paragraph 1
+1.   Providers of online platforms allowing consumers to conclude distance contracts with traders shall ensure that traders can only use those online platforms to promote messages on or to offer products or services to consumers located in the Union if, prior to the use of their services for those purposes, they have obtained the following information, where applicable to the trader: (a) the name, address, telephone number and email address of the trader; (b) a copy of the identification document of the trader or any other electronic identification as defined by Article 3 of Regulation (EU) No 910/2014 of the European Parliament and of the Council (40); (c) the payment account details of the trader; (d) where the trader is registered in a trade register or similar public register, the trade register in which the trader is registered and its registration number or equivalent means of identification in that register; (e) a self-certification by the trader committing to only offer products or services that comply with the applicable rules of Union law.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "the provider of the online platform allowing consumers to conclude distance contracts with traders"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall make best efforts to assess",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "whether the information referred to in paragraph 1, points (a) to (e), is reliable and complete"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "through the use of any freely accessible official online database or online interface made available by a Member State or the Union or through requests to the trader to provide supporting documents from reliable sources"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "Stated",
+            "value": "Upon receiving the information referred to in paragraph 1 and prior to allowing the trader concerned to use its services"
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "Consumers located in the Union"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall make best efforts to assess')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

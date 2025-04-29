@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    082
+Paragraph:  001
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1156
+Out Tokens: 67
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Prior to making such request to the Digital Services Coordinator, the Commission shall invite interested parties to submit written observations within a period that shall not be less than 14 working days, describing the measures it intends to request and identifying the intended addressee or addressees thereof.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   Where all powers pursuant to this Section to bring about the cessation of an infringement of this Regulation have been exhausted, the infringement persists and causes serious harm which cannot be avoided through the exercise of other powers available under Union or national law, the Commission may request the Digital Services Coordinator of establishment of the provider of the very large online platform or of the very large online search engine concerned to act pursuant to Article 51(3). Prior to making such request to the Digital Services Coordinator, the Commission shall invite interested parties to submit written observations within a period that shall not be less than 14 working days, describing the measures it intends to request and identifying the intended addressee or addressees thereof.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Commission to perform a specific action\u2014inviting interested parties to submit written observations\u2014before making a request to the Digital Services Coordinator. It regulates the Commission\u2019s behavior by mandating this procedural step."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

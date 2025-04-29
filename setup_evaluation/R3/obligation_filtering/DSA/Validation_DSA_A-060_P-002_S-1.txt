@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    060
+Paragraph:  002
+Sentence:   2
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1142
+Out Tokens: 65
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Digital Services Coordinator of establishment shall communicate its preliminary position on the alleged infringement no later than one month after the end of the deadline referred to in the first subparagraph to all Digital Services Coordinators, the Commission and the Board.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   Any Digital Services Coordinator that proves that it has a legitimate interest in participating in a joint investigation pursuant to paragraph 1 may request to do so. The joint investigation shall be concluded within three months from its launch, unless otherwise agreed amongst the participants. The Digital Services Coordinator of establishment shall communicate its preliminary position on the alleged infringement no later than one month after the end of the deadline referred to in the first subparagraph to all Digital Services Coordinators, the Commission and the Board. The preliminary position shall take into account the views of all other Digital Services Coordinators participating in the joint investigation. Where applicable, this preliminary position shall also set out the enforcement measures envisaged.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Digital Services Coordinator of establishment to perform a specific action\u2014communicating its preliminary position on the alleged infringement within a specified timeframe. It regulates the Coordinator's behavior by mandating this activity."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

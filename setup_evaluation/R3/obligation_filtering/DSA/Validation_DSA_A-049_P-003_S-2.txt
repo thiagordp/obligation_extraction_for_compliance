@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    049
+Paragraph:  003
+Sentence:   3
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 17:27:32
+In Tokens:  1082
+Out Tokens: 68
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Member State concerned shall communicate to the Commission and the Board the name of the other competent authorities referred to in paragraph 2, as well as their respective tasks.
+
+
+## Context (Surrounding text where the sentence appears)
+3.   Member States shall designate the Digital Services Coordinators by 17 February 2024. Member States shall make publicly available, and communicate to the Commission and the Board, the name of their competent authority designated as Digital Services Coordinator and information on how it can be contacted. The Member State concerned shall communicate to the Commission and the Board the name of the other competent authorities referred to in paragraph 2, as well as their respective tasks.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Member State concerned to perform a specific action\u2014communicating the name of other competent authorities and their tasks to the Commission and the Board. It regulates the Member State's behavior by mandating this activity."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

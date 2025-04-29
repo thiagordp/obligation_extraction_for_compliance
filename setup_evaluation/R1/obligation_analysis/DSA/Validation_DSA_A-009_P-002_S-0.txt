@@ -1,0 +1,122 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    DSA
+Article:    009
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:33:21
+In Tokens:  6362
+Out Tokens: 522
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+Member States shall ensure that when an order referred to in paragraph 1 is transmitted to the provider, it meets at least the following conditions: (a) that order contains the following elements: (i) a reference to the legal basis under Union or national law for the order; (ii) a statement of reasons explaining why the information is illegal content, by reference to one or more specific provisions of Union law or national law in compliance with Union law; (iii) information identifying the issuing authority; (iv) clear information enabling the provider of intermediary services to identify and locate the illegal content concerned, such as one or more exact URL and, where necessary, additional information; (v) information about redress mechanisms available to the provider of intermediary services and to the recipient of the service who provided the content; (vi) where applicable, information about which authority is to receive the information about the effect given to the orders; (b) the territorial scope of that order, on the basis of the applicable rules of Union and national law, including the Charter, and, where relevant, general principles of international law, is limited to what is strictly necessary to achieve its objective; (c) that order is transmitted in one of the languages declared by the provider of intermediary services pursuant to Article 11(3) or in another official language of the Member States, agreed between the authority issuing the order and that provider, and is sent to the electronic point of contact designated by that provider, in accordance with Article 11; where the order is not drafted in the language declared by the provider of intermediary services or in another bilaterally agreed language, the order may be transmitted in the language of the authority issuing the order, provided that it is accompanied by a translation into such declared or bilaterally agreed language of at least the elements set out in points (a) and (b) of this paragraph.
+
+
+## Context (Surrounding text where the sentence appears)
+1.   Upon the receipt of an order to act against one or more specific items of illegal content, issued by the relevant national judicial or administrative authorities, on the basis of the applicable Union law or national law in compliance with Union law, providers of intermediary services shall inform the authority issuing the order, or any other authority specified in the order, of any effect given to the order without undue delay, specifying if and when effect was given to the order.
+2.   Member States shall ensure that when an order referred to in paragraph 1 is transmitted to the provider, it meets at least the following conditions: (a) that order contains the following elements: (i) a reference to the legal basis under Union or national law for the order; (ii) a statement of reasons explaining why the information is illegal content, by reference to one or more specific provisions of Union law or national law in compliance with Union law; (iii) information identifying the issuing authority; (iv) clear information enabling the provider of intermediary services to identify and locate the illegal content concerned, such as one or more exact URL and, where necessary, additional information; (v) information about redress mechanisms available to the provider of intermediary services and to the recipient of the service who provided the content; (vi) where applicable, information about which authority is to receive the information about the effect given to the orders; (b) the territorial scope of that order, on the basis of the applicable rules of Union and national law, including the Charter, and, where relevant, general principles of international law, is limited to what is strictly necessary to achieve its objective; (c) that order is transmitted in one of the languages declared by the provider of intermediary services pursuant to Article 11(3) or in another official language of the Member States, agreed between the authority issuing the order and that provider, and is sent to the electronic point of contact designated by that provider, in accordance with Article 11; where the order is not drafted in the language declared by the provider of intermediary services or in another bilaterally agreed language, the order may be transmitted in the language of the authority issuing the order, provided that it is accompanied by a translation into such declared or bilaterally agreed language of at least the elements set out in points (a) and (b) of this paragraph.
+3.   The authority issuing the order or, where applicable, the authority specified therein, shall transmit it, along with any information received from the provider of intermediary services concerning the effect given to that order to the Digital Services Coordinator from the Member State of the issuing authority.
+
+## Citations to other paragraphs, sections, if any
+Article 9 Paragraph 1
+1.   Upon the receipt of an order to act against one or more specific items of illegal content, issued by the relevant national judicial or administrative authorities, on the basis of the applicable Union law or national law in compliance with Union law, providers of intermediary services shall inform the authority issuing the order, or any other authority specified in the order, of any effect given to the order without undue delay, specifying if and when effect was given to the order.
+
+
+Article 11 Paragraph 1
+1.   Providers of intermediary services shall designate a single point of contact to enable them to communicate directly, by electronic means, with Member States’ authorities, the Commission and the Board referred to in Article 61 for the application of this Regulation.
+
+
+Article 11 Paragraph 2
+2.   Providers of intermediary services shall make public the information necessary to easily identify and communicate with their single points of contact. That information shall be easily accessible, and shall be kept up to date.
+
+
+Article 11 Paragraph 3
+3.   Providers of intermediary services shall specify in the information referred to in paragraph 2 the official language or languages of the Member States which, in addition to a language broadly understood by the largest possible number of Union citizens, can be used to communicate with their points of contact, and which shall include at least one of the official languages of the Member State in which the provider of intermediary services has its main establishment or where its legal representative resides or is established.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "Member States"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall ensure",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "that when an order referred to in paragraph 1 is transmitted to the provider, it meets at least the following conditions"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "(a) that order contains the following elements: (i) a reference to the legal basis under Union or national law for the order; (ii) a statement of reasons explaining why the information is illegal content, by reference to one or more specific provisions of Union law or national law in compliance with Union law; (iii) information identifying the issuing authority; (iv) clear information enabling the provider of intermediary services to identify and locate the illegal content concerned, such as one or more exact URL and, where necessary, additional information; (v) information about redress mechanisms available to the provider of intermediary services and to the recipient of the service who provided the content; (vi) where applicable, information about which authority is to receive the information about the effect given to the orders"
+         },
+         {
+            "extraction_method": "Stated",
+            "value": "(b) the territorial scope of that order, on the basis of the applicable rules of Union and national law, including the Charter, and, where relevant, general principles of international law, is limited to what is strictly necessary to achieve its objective"
+         },
+         {
+            "extraction_method": "Stated",
+            "value": "(c) that order is transmitted in one of the languages declared by the provider of intermediary services pursuant to Article 11(3) or in another official language of the Member States, agreed between the authority issuing the order and that provider, and is sent to the electronic point of contact designated by that provider, in accordance with Article 11"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Background-Knowledge",
+            "value": "providers of intermediary services"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [X]
+
+### Obligation 1 (Predicate: 'shall ensure')
+
+1. ObligationTypeClassification: [X]
+2. Addressees:
+    - Value                      [X]
+    - Extraction Method          [X]
+3. Predicates:
+    - Value                      [X]
+    - Extraction Method          [X]
+4. Objects:
+    - Value                      [X]
+    - Extraction Method          [X]
+5. Specifications:
+    - Value                      [X]
+    - Extraction Method          [X]
+6. Pre-Conditions
+    - Value                      [X]
+    - Extraction Method          [X]
+7. Beneficiaries
+    - Value                      [X]
+    - Extraction Method          [X]
+
+

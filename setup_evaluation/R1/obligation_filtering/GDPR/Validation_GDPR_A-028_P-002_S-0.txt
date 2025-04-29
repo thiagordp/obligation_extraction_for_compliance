@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    028
+Paragraph:  002
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:59:16
+In Tokens:  1040
+Out Tokens: 62
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The processor shall not engage another processor without prior specific or general written authorisation of the controller.
+
+
+## Context (Surrounding text where the sentence appears)
+2.   The processor shall not engage another processor without prior specific or general written authorisation of the controller. In the case of general written authorisation, the processor shall inform the controller of any intended changes concerning the addition or replacement of other processors, thereby giving the controller the opportunity to object to such changes.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic prohibition",
+   "justification": "This statement imposes a prohibition on the processor, specifically restricting the action of engaging another processor without the required authorisation from the controller, thus regulating the processor's behavior by forbidding this activity under certain conditions."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

@@ -1,0 +1,38 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    GDPR
+Article:    068
+Paragraph:  005
+Sentence:   3
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo-Free
+Prompt:     data/raw/prompts/obligation_filtering_system.txt
+Timestamp:  17/01/2025 18:59:16
+In Tokens:  1021
+Out Tokens: 61
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Chair of the Board shall communicate to the Commission the activities of the Board.
+
+
+## Context (Surrounding text where the sentence appears)
+5.   The Commission shall have the right to participate in the activities and meetings of the Board without voting right. The Commission shall designate a representative. The Chair of the Board shall communicate to the Commission the activities of the Board.
+
+## Citations to other paragraphs, sections, if any
+No Citation
+```
+
+## LLM Output
+```
+{
+   "classification": "Deontic obligation",
+   "justification": "This statement imposes a duty on the Chair of the Board to perform a specific action\u2014communicating the activities of the Board to the Commission. It regulates the Chair\u2019s behavior by mandating this activity."
+}
+```
+
+## Evaluation
+Classification: [X]
+Justification:  [X]

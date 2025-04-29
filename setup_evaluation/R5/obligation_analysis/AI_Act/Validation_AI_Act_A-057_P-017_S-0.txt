@@ -1,0 +1,289 @@
+# Obligation Filtering Validation
+
+## Metadata
+
+Dataset:    AI_Act
+Article:    057
+Paragraph:  017
+Sentence:   1
+LLM Model:  meta-llama/Llama-3.3-70B-Instruct-Turbo
+Prompt:     data/raw/prompts/obligation_analysis_system.txt
+Timestamp:  18/01/2025 06:57:56
+In Tokens:  5855
+Out Tokens: 794
+
+## LLM Input (Sentence + Paragraph + Citation (if any))
+```
+## Sentence to analyse
+The Commission shall develop a single and dedicated interface containing all relevant information related to AI regulatory sandboxes to allow stakeholders to interact with AI regulatory sandboxes and to raise enquiries with competent authorities, and to seek non-binding guidance on the conformity of innovative products, services, business models embedding AI technologies, in accordance with Article 62(1), point (c).
+
+
+## Context (Surrounding text where the sentence appears)
+16.   National competent authorities shall submit annual reports to the AI Office and to the Board, from one year after the establishment of the AI regulatory sandbox and every year thereafter until its termination, and a final report. Those reports shall provide information on the progress and results of the implementation of those sandboxes, including best practices, incidents, lessons learnt and recommendations on their setup and, where relevant, on the application and possible revision of this Regulation, including its delegated and implementing acts, and on the application of other Union law supervised by the competent authorities within the sandbox. The national competent authorities shall make those annual reports or abstracts thereof available to the public, online. The Commission shall, where appropriate, take the annual reports into account when exercising its tasks under this Regulation.
+17.   The Commission shall develop a single and dedicated interface containing all relevant information related to AI regulatory sandboxes to allow stakeholders to interact with AI regulatory sandboxes and to raise enquiries with competent authorities, and to seek non-binding guidance on the conformity of innovative products, services, business models embedding AI technologies, in accordance with Article 62(1), point (c). The Commission shall proactively coordinate with national competent authorities, where relevant.
+
+## Citations to other paragraphs, sections, if any
+Article 62 Paragraph 1
+1.   Member States shall undertake the following actions: (a) provide SMEs, including start-ups, having a registered office or a branch in the Union, with priority access to the AI regulatory sandboxes, to the extent that they fulfil the eligibility conditions and selection criteria; the priority access shall not preclude other SMEs, including start-ups, other than those referred to in this paragraph from access to the AI regulatory sandbox, provided that they also fulfil the eligibility conditions and selection criteria; (b) organise specific awareness raising and training activities on the application of this Regulation tailored to the needs of SMEs including start-ups, deployers and, as appropriate, local public authorities; (c) utilise existing dedicated channels and where appropriate, establish new ones for communication with SMEs including start-ups, deployers, other innovators and, as appropriate, local public authorities to provide advice and respond to queries about the implementation of this Regulation, including as regards participation in AI regulatory sandboxes; (d) facilitate the participation of SMEs and other relevant stakeholders in the standardisation development process.
+
+
+Article 62 Paragraph 2
+2.   The specific interests and needs of the SME providers, including start-ups, shall be taken into account when setting the fees for conformity assessment under Article 43, reducing those fees proportionately to their size, market size and other relevant indicators.
+
+
+Article 62 Paragraph 3
+3.   The AI Office shall undertake the following actions: (a) provide standardised templates for areas covered by this Regulation, as specified by the Board in its request; (b) develop and maintain a single information platform providing easy to use information in relation to this Regulation for all operators across the Union; (c) organise appropriate communication campaigns to raise awareness about the obligations arising from this Regulation; (d) evaluate and promote the convergence of best practices in public procurement procedures in relation to AI systems.
+```
+
+## LLM Output
+```
+[
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Commission"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall develop",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "a single and dedicated interface"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "containing all relevant information related to AI regulatory sandboxes"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "stakeholders"
+         }
+      ]
+   },
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Commission"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall allow",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "stakeholders to interact with AI regulatory sandboxes"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "stakeholders"
+         }
+      ]
+   },
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Commission"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall raise",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "enquiries with competent authorities"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "stakeholders"
+         }
+      ]
+   },
+   {
+      "ObligationTypeClassification": "Obligation of Action",
+      "Addressees": [
+         {
+            "extraction_method": "Stated",
+            "value": "The Commission"
+         }
+      ],
+      "Predicate": {
+         "extraction_method": "Stated",
+         "value": "shall seek",
+         "verb": "active"
+      },
+      "Targets": [
+         {
+            "extraction_method": "Stated",
+            "value": "non-binding guidance on the conformity of innovative products, services, business models embedding AI technologies"
+         }
+      ],
+      "Specifications": [
+         {
+            "extraction_method": "Stated",
+            "value": "in accordance with Article 62(1), point (c)"
+         }
+      ],
+      "Pre-Conditions": [
+         {
+            "extraction_method": "None",
+            "value": null
+         }
+      ],
+      "Beneficiaries": [
+         {
+            "extraction_method": "Stated",
+            "value": "stakeholders"
+         }
+      ]
+   }
+]
+```
+
+## Evaluation
+
+### Overall Evaluation
+No of obligations identified:    [0]
+
+### Obligation 1 (Predicate: 'shall develop')
+
+1. ObligationTypeClassification: [1]
+2. Addressees:
+    - Value                      [1]
+    - Extraction Method          [1]
+3. Predicates:
+    - Value                      [1]
+    - Extraction Method          [1]
+4. Objects:
+    - Value                      [1]
+    - Extraction Method          [1]
+5. Specifications:
+    - Value                      [1]
+    - Extraction Method          [1]
+6. Pre-Conditions
+    - Value                      [1]
+    - Extraction Method          [1]
+7. Beneficiaries
+    - Value                      [1]
+    - Extraction Method          [1]
+
+### Obligation 2 (Predicate: 'shall allow')
+
+1. ObligationTypeClassification: [0]
+2. Addressees:
+    - Value                      [0]
+    - Extraction Method          [0]
+3. Predicates:
+    - Value                      [0]
+    - Extraction Method          [0]
+4. Objects:
+    - Value                      [0]
+    - Extraction Method          [0]
+5. Specifications:
+    - Value                      [0]
+    - Extraction Method          [0]
+6. Pre-Conditions
+    - Value                      [0]
+    - Extraction Method          [0]
+7. Beneficiaries
+    - Value                      [0]
+    - Extraction Method          [0]
+
+### Obligation 3 (Predicate: 'shall raise')
+
+1. ObligationTypeClassification: [0]
+2. Addressees:
+    - Value                      [0]
+    - Extraction Method          [0]
+3. Predicates:
+    - Value                      [0]
+    - Extraction Method          [0]
+4. Objects:
+    - Value                      [0]
+    - Extraction Method          [0]
+5. Specifications:
+    - Value                      [0]
+    - Extraction Method          [0]
+6. Pre-Conditions
+    - Value                      [0]
+    - Extraction Method          [0]
+7. Beneficiaries
+    - Value                      [0]
+    - Extraction Method          [0]
+
+### Obligation 4 (Predicate: 'shall seek')
+
+1. ObligationTypeClassification: [0]
+2. Addressees:
+    - Value                      [0]
+    - Extraction Method          [0]
+3. Predicates:
+    - Value                      [0]
+    - Extraction Method          [0]
+4. Objects:
+    - Value                      [0]
+    - Extraction Method          [0]
+5. Specifications:
+    - Value                      [0]
+    - Extraction Method          [0]
+6. Pre-Conditions
+    - Value                      [0]
+    - Extraction Method          [0]
+7. Beneficiaries
+    - Value                      [0]
+    - Extraction Method          [0]
+
+
