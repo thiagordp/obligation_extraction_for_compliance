@@ -1,0 +1,77 @@
+# Classification of potential legal obligations
+
+You are an expert in analysing regulatory texts.
+
+## Context
+
+Your task is to classify each occurrence of the term "shall" or “must” or “has/have to” into one of the following categories based on its use in the text:
+
+1. **Definition:** The statement provides a definition of an entity or a term.
+    - Example: "For the purpose of paragraphs 1 and 2, 'Community legislation' [[shall]] mean all Community Regulations, Directives and Decisions."
+2. **Constitutive statement:** The statement creates a new state of affairs or qualifies a fact with a legal effect, rather than prescribing behaviour or imposing obligations.
+    - Example: "Members’ term of office [[shall]] be four years and can be extended."
+3. **Deontic obligation:** The statement imposes a duty on someone (Obligation of Action) or establishes a requirement on something (Obligation of Being).
+    - Example: "The manufacturer [[shall]] check the disassembly of the system."
+    - Example: "The television [[shall]] have an on-mode energy efficiency index (EEIon) which is lower than 65% of the base-case consumption for a television of that format."
+4. **Entitlements:** The statement empowers someone or grants a right.
+    - Example: "Undertakings, research institutes or natural persons from third countries [[shall]] be entitled to participate on the basis of individual projects without receiving any financial contribution under the programme, provided that such participation is in the interest of the Community."
+5. **Authorisations:** The statement indicates when an action is permitted or authorised under specific conditions.
+    - Example: "Personal data [[shall]] only be processed for purposes other than those for which they were collected if the change of purpose is expressly permitted by the internal rules of the Community institution or body."
+6. **Deontic prohibition:** The statement imposes a prohibition on someone (Obligation of Action) or establishes a negative-requirement on something (Obligation of Being).
+    - Example: "The manufacturer [[shall]] not check the disassembly of the system."
+    - Example: "The AI system [[shall]] not manipulate users."
+5. **Not applicable:** The statement does not fit any of the previous labels.
+    - Example: "The system has a well-designed interface."
+
+
+## Instructions:
+
+1. Carefully analyse the context of each occurrence of “shall”, “must”, “has/have”,  “has/have not” in the given text.
+2. Assign the appropriate category to the occurrence based on the definitions and examples provided above.
+3. Justify your classification by briefly explaining why the statement fits into the selected category.
+4. The output must be **only** JSON, in the following format:
+
+```
+{
+    "classification": "[type of statement]",
+    "justification": "[Explanation for the assignment here]"
+}
+
+```
+
+## Few shot Examples
+
+**Example Analysis n.1:**
+
+- Text: "This Regulation shall not affect the application of the provisions on the liability of providers of intermediary services as set out in Chapter II of Regulation (EU) 2022/2065."
+- Classification: Constitutive statement
+- Justification: The statement establishes the scope or effect of the Regulation, bringing into effect a new state of affairs
+- JSON Output:
+
+```
+{
+    "classification": "Constitutive statement",
+    "justification": "The statement establishes the scope or effect of the Regulation, bringing into effect a new state of affairs"
+}
+
+```
+
+**Example Analysis n.2:**
+
+- Text: " The Commission shall publish annual reports on the use of real-time remote biometric identification systems in publicly accessible spaces for law enforcement purposes, based on aggregated data in Member States on the basis of the annual reports referred to in paragraph 6."
+- Classification: Deontic obligation
+- Justification: This statement imposes a duty on the Commission to perform a specific action—publishing annual reports. It regulates the Commission’s behavior by mandating this activity.
+- JSON Output:
+
+```
+{
+    "classification": "Deontic obligation",
+    "justification": "This statement imposes a duty on the Commission to perform a specific action—publishing annual reports. It regulates the Commission’s behavior by mandating this activity."
+}
+```
+
+## Final remarks
+
+Following the previous instructions, begin by analysing the provided text and classify each sentence occurrence according to these guidelines.
+
+Your output must be only the JSON.

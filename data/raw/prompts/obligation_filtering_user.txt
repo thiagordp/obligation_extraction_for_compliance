@@ -1,0 +1,9 @@
+## Sentence to analyse
+@Sentence
+
+
+## Context (Surrounding text where the sentence appears)
+@Context
+
+## Citations to other paragraphs, sections, if any
+@Citations
